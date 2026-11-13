@@ -388,43 +388,21 @@
     <h2>Abstract</h2>
 
     <p>
-      Orthopaedic surgeries require a variety of specialised
-      instruments, which are organised into trays and prepared
-      before each operation. Depending on the procedure,
-      these trays may come from the hospital's own inventory
-      or external vendors.
+      Orthopaedic surgeries require specialised instruments organised into trays, which must be prepared before each operation. However, trays may be stored in different locations, moved between operating theatres or still undergoing sterilisation. Their similar appearances also make identification difficult, leading nurses to spend additional time searching or confirming tray locations.
     </p>
 
     <p>
-      However, locating these trays is not straightforward.
-      Trays may be stored in different areas, moved between
-      operating theatres or undergoing sterilisation.
-      Many trays also look similar, making it difficult
-      to identify the correct set quickly.
+      Through clinical observations, stakeholder interviews and surveys, our team identified a key problem: limited visibility of orthopaedic instrument tray location and availability during preoperative preparation.
     </p>
 
     <p>
-      Through clinical observations, stakeholder interviews
-      and surveys, our team identified a key problem:
-      limited visibility of the location and availability
-      of orthopaedic instrument trays during preoperative
-      preparation.
+     Orthomatic aims to address this uncertainty through improved tray identification, location tracking and retrieval guidance, with a target search time of no more than 3 minutes per tray.
     </p>
 
     <p>
-      Orthomatic aims to address this uncertainty by
-      exploring ways to improve tray identification,
-      location tracking and retrieval guidance.
-      Our target is to reduce preoperative tray-search
-      time to no more than three minutes per tray.
+     This semester, we identified design requirements, evaluated possible solutions and conducted initial technical and user-interface tests. These findings will guide the development of an integrated prototype in the next stage.
     </p>
 
-    <p>
-      This semester, we focused on understanding the
-      problem, identifying design requirements,
-      generating possible solutions and conducting
-      initial technical and user interface tests.
-    </p>
   </section>
 
   <sl-divider></sl-divider>
@@ -448,19 +426,13 @@
     </figure>
 
     <p>
-      Orthopaedic surgeries use specialised instruments for procedures such as total knee replacement, hip replacement, spinal surgery and fracture repair. These instruments are organised into trays according to their function, procedure and manufacturer/vendors. One specialised set can be made up of multiple trays and some surgeries may require more than one set from different vendors.
+      Each tray may contain many instruments and can be heavy, making handling and retrieval physically demanding. The number of trays required also varies between procedures. 
     </p>
+    
     <p>
-      In our preliminary interviews with surgeons, we discovered that orthopaedic surgeons have the option to choose which vendors’ instruments and implants they want to use for a patient. Other than for simple procedures, vendors will send in representatives (reps) to guide OT staff on instrument use. Surgeons choose vendors depending on vendor relationship, quality of service and other factors, at times, it may even be random. 
+     Vendor trays are either consignment sets stored in hospitals or warehouse sets delivered when required. These trays may be shared between hospitals, adding complexity to their availability and preparation.
     </p>
 
-    <p>
-      Each tray may contain many instruments and can be heavy, making handling and retrieval physically demanding. The number of trays required also varies between procedures. Our research identified approximately 6-10 trays for total knee replacement, 5-9 for partial hip replacement, 15-20 for spinal surgery and 5-10 for fracture surgery. Given an estimate of 50,000 to 55,000 orthopaedic surgeries in Singapore per year, and 7 to 20 trays prepared per surgery, this means about 250,000 to 715,000 trays used per year. These figures are estimates, as actual requirements depend on the procedure, surgeon and vendor.
-    </p>
-
-    <p>
-      Vendor instrument trays can either be consignment sets or warehouse sets. Consignment sets are vendor-owned but stored in hospital premises. Warehouse sets are sent to the hospital by the vendors whenever they are needed. These trays rotate between hospitals based on where they are needed. Instrument trays range in the price of thousands, which is why they remain vendor owned. In addition to vendor instrument trays, surgical teams may require vendor implant sets, the hospitals’ own tray sets, and consumables. 
-    </p>
     <p>
       Overall, this results in a complex preparation process, especially since multiple surgeries are scheduled back to back within the same day. Any delays or breaks in the workflow may cause consequences such as postponement of surgeries and in the worst case, compromise of patient safety.
     </p>
@@ -468,21 +440,6 @@
     <h3 id="stakeholders">
       1.2 Stakeholders Involved in Tray Preparation
     </h3>
-
-    <p>
-      Preparing instrument trays involves several
-      groups of people, each with different
-      responsibilities.
-    </p>
-
-    <p>
-      Surgeons determine the required instruments,
-      vendors provide specialised sets, and TSSU
-      staff handle receiving, washing, packing
-      and sterilisation. OT nurses coordinate
-      these activities to ensure that the required
-      trays are available for surgery.
-    </p>
 
     <figure class="report-figure">
       <img
@@ -495,23 +452,18 @@
       </figcaption>
     </figure>
 
+        <p>
+     Orthopaedic tray preparation involves several stakeholders, including surgeons, vendors, TSSU staff and OT nurses. Preliminary interviews showed that surgeons select instruments and implants based on clinical needs and vendor preferences. Vendor representatives may also provide support during surgery, particularly for complex procedures.
+    </p>
+
+    <p>
+    As trays move between different stages of preparation, these groups must coordinate to ensure the required instruments are ready for surgery. However, information is often shared separately, making it difficult for nurses to confirm tray locations and availability
+    </p>
+    
     <h3 id="clinical-research">
       1.3 Understanding the Problem Through Clinical Research
     </h3>
-
-    <p>
-      We carried out interviews, hospital visits,
-      procedure observations, nurse shadowing
-      and a survey to understand the current
-      tray preparation workflow.
-    </p>
-
-    <p>
-      Our interim research included 23 stakeholder
-      interviews, five procedure observations
-      and 30 nurse survey responses.
-    </p>
-
+    
     <figure class="report-figure">
       <img
         src="assets/figure3-research.png"
@@ -522,7 +474,14 @@
         <i>Clinical Research and Discovery Activities</i>
       </figcaption>
     </figure>
-  
+    
+    <p>
+   After listening to the issues in this workflow from the perspective of our clinical mentors, we talked to more surgeons, from different hospitals and countries, to understand their experiences. Then we zoomed out to understand the concerns of all the stakeholders involved in the tray preparation process. 
+    </p>
+
+    <p>
+   We carried out interviews, hospital visits, procedure observations, nurse shadowing and sent out a survey. Our interim presentation records 23 stakeholder interviews involving nurses, surgeons, residents, hospital staff and vendors. We also observed five procedures, visited TSSU facilities at SGH and Woodlands Hospital, and collected 30 nurse survey responses. These helped us understand both the overall preparation process and the difficulties faced by nurses [Annex A].
+    </p>
     
     <figure class="report-figure">
       <img
@@ -538,15 +497,7 @@
 <!-- CONTINUATION AFTER FIGURE 4 -->
 
 <p>
-  During our hospital visits, we observed trays stored
-  in OT rooms, OT corridors and storage areas in TSSU.
-  Some trays were stacked on racks or trolleys, while
-  others were placed in temporary storage locations.
-  In the OT, these trays are sometimes organised by
-  vendor, but due to space limitations, trays may be
-  placed wherever space is available. After sterilisation,
-  trays can also be temporarily stored in carts in TSSU
-  before being transported to the OT.
+  This figure illustrates the overall instrument tray preparation workflow. As trays move between these stages, their locations and availability may change. However, information about these movements is not always readily available to nurses.
 </p>
 
 <!-- FIGURE 5: HOSPITAL STORAGE OBSERVATIONS -->
@@ -564,9 +515,7 @@
 
 
 <p>
-  We also observed handwritten lists and notes being
-  used to communicate which trays were required or
-  had already been prepared.
+  During our hospital visits, we observed trays stored in OT rooms, OT corridors and storage areas in TSSU. Some trays were stacked on racks or trolleys, while others were placed in temporary storage locations. In the OT, these trays are sometimes organised by vendor, but due to space limitations, most trays are placed randomly, wherever there is space. After sterilisation, trays can also be temporarily stored in carts in the TSSU, before being transported up to the OT.
 </p>
 
 <!-- FIGURE 6: HANDWRITTEN TRAY LISTS -->
@@ -584,51 +533,21 @@
 
 
 <p>
-  These observations showed that locating a tray
-  is not simply a matter of checking a fixed storage
-  position. Its location may change throughout the day,
-  depending on the surgery schedule, sterilisation
-  process and movement of trays between different
-  parts of the hospital.
-</p>
-
-<p>
-  Nurses must write out the trays needed for each
-  surgery, check the storage areas for the required
-  trays and transport them to their respective OTs.
-  As each tray is wrapped in layers of sterile
-  wrapping, the trays look very similar, leaving
-  nurses to rely on reading each label individually.
+  We also observed handwritten lists and notes being used to communicate which trays were required or had already been prepared. Nurses must write out all the trays they need to prepare for each surgery, check each storage area for the required tray, and transport these trays together to their respective OTs. As each tray is wrapped in layers of sterile wrapper, they look very similar, leaving the nurses to rely on reading each tray label individually. 
 </p>
 
 <h3 id="nurse-findings">1.4 Findings from Nurses</h3>
 
 <p>
-  Our interviews and survey highlighted several
-  recurring difficulties during tray preparation.
+  As OT nurses carry much of the responsibility for tray preparation, we conducted nurse shadowing and surveys to understand their difficulties.
 </p>
 
 <p>
-  First, nurses may need to search different locations
-  because trays are moved or temporarily stored
-  in other areas.
+  Four recurring problems emerged. First, trays may be moved or stored in unexpected locations. Second, similar-looking trays and inconsistent labels make identification difficult. Third, nurses may not know whether trays are undergoing sterilisation, being used or awaiting delivery. Finally, nurses often need to contact TSSU staff, vendors or colleagues to confirm tray locations and availability.
 </p>
 
 <p>
-  Second, many trays look similar, while labels
-  may be small or inconsistent between vendors.
-</p>
-
-<p>
-  Third, nurses may not know whether a tray is
-  available. It may still be undergoing sterilisation,
-  in use or awaiting delivery.
-</p>
-
-<p>
-  Finally, nurses often need to contact TSSU staff,
-  vendors or other nurses to confirm tray locations
-  and availability.
+These findings suggest that the main difficulty is not always a missing tray, but the lack of reliable information about its current location and status.
 </p>
 
 </section>
@@ -645,9 +564,7 @@
   <h3 id="root-cause">2.1 Root Cause Analysis</h3>
 
   <p>
-    We conducted a root cause analysis to identify
-    the main factors contributing to prolonged
-    tray preparation and retrieval.
+    We dug deeper and conducted a root cause analysis to identify key factors contributing to long tray preparation times. 
   </p>
 
   <!-- FIGURE 7 -->
@@ -667,13 +584,13 @@
   <h3 id="prioritisation">2.2 Problem Prioritisation</h3>
 
   <p>
-    We used a problem prioritisation matrix to
-    compare different areas of intervention.
-    Each problem was assessed based on time
-    impact (40%), technical feasibility (35%)
-    and ease of implementation (25%).
+    We used a problem prioritisation matrix to compare different areas of intervention.
   </p>
-
+  
+  <p>
+    Our matrix considered time impact, technical feasibility and ease of implementation, weighted at 40%, 35% and 25%, respectively. Time impact refers to the amount of time that could be cut by solving the issue, technical feasibility is how easily the problem could be tackled through technology and ease of implementation refers to how easily the stakeholders involved could be convinced to adopt a solution into their workflow.
+  </p>
+  
   <table class="report-table">
     <thead>
       <tr>
@@ -707,18 +624,15 @@
   </table>
 
   <p>
-    Manual workflow received the highest
-    weighted score. However, further analysis
-    showed that manual workflow describes
-    the current process rather than the
-    underlying problem.
+    Manual workflow received the highest weighted score of 4.25, suggesting that it has a significant impact on preparation time and is relatively feasible to improve. Other problem areas received lower scores due to their limited feasibility or ease of implementation. 
   </p>
 
   <p>
-    Through stakeholder interviews and clinical
-    observations, we identified uncertainty
-    about tray location and availability
-    as a key issue.
+    The key issues manual workflow contributes to is uncertainty about tray location and availability. This uncertainty arises from several factors, including similar-looking trays, inconsistent labelling, unknown tray movements and delayed communication between stakeholders. Furthermore, trays may be present in the hospital but unavailable because they are still undergoing sterilisation or being used in another procedure.
+  </p>
+
+  <p>
+    Therefore, our project was refined to focus on improving the visibility of tray location and availability. 
   </p>
 
   <h3 id="problem-statement">
@@ -727,12 +641,7 @@
 
   <div class="statement">
     <p>
-      OT nurses face uncertainty about the location
-      and availability of orthopaedic instrument
-      trays during preoperative preparation,
-      leading to additional searching, repeated
-      communication and time spent gathering
-      the required instruments.
+      OT nurses face uncertainty about the location and availability of orthopaedic instrument trays during preoperative preparation, leading to additional searching, repeated communication and time spent gathering the required instruments.
     </p>
   </div>
 
@@ -740,12 +649,15 @@
 
   <div class="statement">
     <p>
-      A seamless, reliable way to identify and
-      retrieve surgical instrument trays during
-      preoperative preparation, such that search
-      time is no more than three minutes per tray,
-      so hospital staff can dedicate more time
-      to patient care.
+      Our revised needs statement is:
+    </p>
+    
+     <p>
+      <strong>A seamless, reliable way to identify and retrieve surgical instrument trays during preoperative preparation, such that search time is no more than 3 minutes per tray, so hospital staff can dedicate more time for patient care.</strong>
+    </p>
+    
+     <p>
+      Before reaching this statement, we clarified the tray-preparation workflow, where the solution should fit, and what it can realistically improve. Our project focuses on improving tray identification and retrieval. Nurses often retrieve familiar trays quickly from memory, so the goal is to prevent corner cases where a routine 3-4 minute retrieval turns into a search lasting up to 30 minutes for a singular tray [Annex D].
     </p>
   </div>
 
@@ -763,31 +675,31 @@
   <h3>3.1 Value Proposition</h3>
 
   <p>
-    Orthomatic aims to reduce the uncertainty
-    nurses face when locating orthopaedic
-    instrument trays.
+    Our proposed value lies in combining tray identification, location information and physical retrieval guidance into a workflow designed around the needs of OT nurses. Rather than replacing existing hospital systems, Orthomatic aims to seamlessly integrate into the current workflow to support the specific task of identifying and retrieving the correct instrument tray. 
   </p>
 
   <p>
-    Our proposed value lies in combining
-    tray identification, location information
-    and physical retrieval guidance into
-    a workflow designed around the needs
-    of OT nurses.
+    The intended benefits include reduced search time, fewer unnecessary movements between storage areas, and less repeated communication. However, these benefits will need to be demonstrated through full-system testing.
   </p>
+  
+<!-- SECTION 3.2: EXISTING SOLUTIONS -->
 
+<h3>3.2 Existing Solutions</h3>
+   <p>
+    Current methods include handwritten preparation lists, calls and messages between stakeholders, and barcode tracking. However, existing barcode systems mainly support sterilisation tracking and billing rather than providing live tray locations.
+   </p>
+  
   <p>
-    Rather than replacing existing hospital
-    systems, Orthomatic aims to fit into the
-    current workflow and support the specific
-    task of identifying and retrieving
-    the correct tray.
+SGH has also introduced a dedicated consignment team to retrieve trays, although this requires additional manpower (Annex A).
+    </p>
+  
+  <p>
+    Our analysis identified an opportunity for a solution that provides updated tray locations, reduces search time and physical effort, and fits into existing hospital workflows without compromising safety.
   </p>
+  
+<!-- SECTION 3.3: DESIGN REQUIREMENTS -->
 
-
-<!-- SECTION 3.2: DESIGN REQUIREMENTS -->
-
-<h3>3.2 Design Requirements</h3>
+<h3>3.3 Design Requirements</h3>
 
 <p>
   Based on our clinical research, we identified
@@ -940,16 +852,11 @@
   <h3>4.1 Brainstorming and Concept Exploration</h3>
 
   <p>
-    We used SCAMPER, BruteThink and the ACE
-    framework to generate and organise
-    possible solutions.
+    We used SCAMPER, BruteThink and the ACE framework to explore possible solutions without committing to one approach too early [Annex B].
   </p>
 
   <p>
-    We identified five main system functions:
-    tray identification, location detection,
-    user interface, retrieval guidance
-    and retrieval confirmation.
+    We organised the proposed system into five functions. The morphological chart shows the technologies considered for each function, allowing us to compare different system configurations.
   </p>
 
   <!-- FIGURE 8 -->
@@ -965,12 +872,18 @@
     </figcaption>
   </figure>
 
+  <p>
+    For each function, we considered several possible technologies. For example, tray identification could be done by UHF RFID, NFC, BLE tags or barcodes. Location detection could involve fixed readers, handheld searching or cameras. Guidance could be provided through shelf lights, sound or proximity feedback.
+  </p>
+
+  <p>
+    This approach allowed us to explore different combinations before selecting a lead concept.
+  </p>
+  
   <h3>4.2 Concept A: Smart Shelf</h3>
 
   <p>
-    The Smart Shelf is designed to identify
-    trays, record their locations and guide
-    nurses to the correct shelf position.
+    The Smart Shelf is a storage system designed to identify trays, record their locations and guide nurses to the correct shelf position.
   </p>
 
   <!-- FIGURE 9 -->
@@ -986,17 +899,18 @@
     </figcaption>
   </figure>
 
-  <h3>4.3 Concept B: Handheld Finder</h3>
-
   <p>
-    The Handheld Finder is a portable device
-    that nurses could use to search for tagged trays.
+    In the proposed workflow, a nurse selects a required tray using a mobile application. The system checks its recorded location and displays the relevant storage area. A shelf indicator then highlights the intended tray position, allowing the nurse to locate and retrieve it. The system would also need a way to verify retrieval and update the recorded tray location when trays are moved.
   </p>
 
   <p>
-    A handheld reader could detect nearby trays
-    and provide feedback to guide nurses towards
-    the required set.
+    Possible components include identification tags, readers or cameras, slot sensors, a shelf controller, LED indicators and a backend database.The exact combination of technologies remains under investigation.
+  </p>
+  
+  <h3>4.3 Concept B: Handheld Finder</h3>
+
+  <p>
+    The Handheld Finder is a portable device that nurses could use to search for tagged trays.
   </p>
 
   <!-- FIGURE 10 -->
@@ -1012,43 +926,25 @@
     </figcaption>
   </figure>
 
+  <p>
+    For example, a handheld reader could detect nearby trays and provide feedback to guide the nurse towards the required set. This approach may be useful when trays are stored in temporary locations or outside fixed shelves. However, it would require nurses to carry and operate an additional device.
+  </p>
 
   <h3>4.4 Concept Evaluation</h3>
 
   <p>
-    Initial nurse feedback supported further
-    investigation of the Smart Shelf because
-    shelf indicators could provide direct
-    retrieval guidance.
+    The nurses we interviewed preferred the Smart Shelf because illuminated indicators could guide them directly to the required tray. However, they highlighted the need to support multiple users and update locations when trays are moved.
   </p>
 
   <p>
-    The Handheld Finder raised concerns about
-    requiring nurses to collect and operate
-    an additional device.
+    The Handheld Finder raised concerns about collecting and operating an additional device. Based on this feedback and our concept evaluation, we selected the Smart Shelf for further development.
   </p>
 
   <p>
-    We therefore selected the Smart Shelf as
-    our lead concept and refined it into a
-    retrofit system that could be attached
-    to existing shelves.
+    To reduce infrastructure changes and costs, we refined it into a retrofit system that can be attached to existing shelves. Its suitability will depend on further technical testing.
   </p>
 
   <h3>4.5 Retrofit Smart Shelf Locator</h3>
-
-  <p>
-    The proposed Retrofit Smart Shelf Locator
-    combines tray identification, shelf sensors,
-    LED indicators and a mobile application.
-  </p>
-
-  <p>
-    A backend system links tray IDs to their
-    recorded shelf locations, allowing nurses
-    to search for trays and receive visual
-    guidance during retrieval.
-  </p>
 
   <!-- FIGURE 11 -->
 
@@ -1065,9 +961,7 @@
 
 
   <p>
-    Automatic tray identification and
-    exact-slot localisation remain development
-    objectives requiring further validation.
+    The proposed Retrofit Smart Shelf Locator combines tray identification, shelf sensors, LED indicators and a mobile application to help nurses locate required trays. A backend system links tray IDs to their recorded shelf locations, allowing nurses to search for trays and receive visual guidance during retrieval.
   </p>
 
 </section>
@@ -1082,20 +976,16 @@
   <h2>5. Initial Prototype Development and Testing</h2>
 
   <p>
-    We began prototyping by investigating
-    individual functions before building
-    the complete system.
+    We began prototyping by investigating individual functions rather than building the entire system together. This allowed us to test important technical questions before deciding which components should be integrated into the Smart Shelf.
   </p>
 
   <h3>5.1 Barcode Testing: Lighting Conditions</h3>
 
   <p>
-    We tested barcode identification at a
-    fixed distance of 30 cm under four
-    lighting conditions.
-  </p>
-
-
+   We first did testing on barcodes as they are an existing tray identification method used by hospitals. Our first experiment investigated whether lighting conditions affect successful tray identification. If they cannot be reliably detected under typical storage lighting, additional lighting or a different identification method may be needed.
+    <p>
+    We placed a barcode at a fixed scanning distance of 30 cm and tested four measured illuminance levels: 53, 150, 430 and 3,000 lux.  
+    </p>
 
   <table class="report-table">
     <thead>
@@ -1115,19 +1005,26 @@
   </table>
 
   <p>
-    Barcode detection succeeded under all tested
-    lighting conditions. Further repeated trials
-    are needed to establish reliability.
+    Barcode detection was successful under all four conditions. As OT brightness is around 1000 lux (Thorlux Lighting, n.d), this suggests that lighting will not prevent identification within the tested range.
+  </p>
+
+  <p>
+    However, our experiment had several limitations. We did not conduct enough repeated trials to establish detection reliability, and the test did not fully reproduce the different lighting warmths and direct glare of actual barcode stickers.
+  </p>
+
+  <p>
+    Our next iteration will therefore use more representative materials and setting, while measuring scanning success and time across repeated trials.
   </p>
 
   <h3>5.2 Barcode Testing: Scanning Coverage</h3>
 
   <p>
-    We investigated whether a fixed camera
-    could identify barcodes at different
-    lateral positions and orientations.
+    Our second barcode experiment investigated whether a fixed camera could identify barcodes positioned at different locations. One possible Smart Shelf configuration uses a fixed camera positioned opposite the storage shelf so barcodes will need to be able to be scanned at different distances and positions. 
   </p>
 
+  <p>
+    We used a 30 cm reference distance and tested barcode orientations of 90°, 60° and 45° at lateral offsets of 15, 45 and 60 cm.
+  </p>
 
   <table class="report-table">
     <thead>
@@ -1147,16 +1044,25 @@
   </table>
 
   <p>
-    Scanning succeeded at the 15 cm offset
-    but failed at larger offsets under
-    our tested setup.
+    Scanning was successful at a 15 cm lateral offset but unsuccessful at 45 cm and 60 cm across all three tested barcode orientations.
   </p>
 
+  <p>
+    Assuming a fixed perpendicular camera-to-shelf distance of 30 cm, these offsets correspond to off-axis viewing angles of approximately 26.6°, 56.3° and 63.4°, respectively: $$\theta = \tan^{-1}\left(\frac{x}{30}\right)$$
+  </p>
+
+  <p>
+    Larger offsets increase the viewing angle and distance to the barcode, which may reduce its apparent size and readability. These results suggest that a single fixed camera may not provide sufficient barcode-reading coverage across a wide shelf. However, the experiment did not isolate the effects of viewing angle, distance and camera field of view. Further testing at smaller offset intervals is required to determine the effective scanning range and whether multiple cameras would be necessary.
+  </p>
+
+  <p>
+    The next iteration will investigate smaller offset intervals, different camera placements and the effect of multiple trays appearing within the same image to help us determine whether fixed-camera identification is practical for a full storage shelf.
+  </p>
+  
   <h3>5.3 NFC Testing: Moving Tray Identification</h3>
 
   <p>
-    We tested whether NFC could identify
-    a tag while it moved across a 10 cm path.
+    Next, we investigated NFC as another possible identification method. NFCs can be passive and read by a compatible reader at close range (STMicroelectronics, n.d.) . Our experiment focused on whether NFCs could be read during movement. We moved an NFC tag across a reader at different speeds.
   </p>
 
   <!-- FIGURE 14 -->
@@ -1179,24 +1085,28 @@
   </table>
 
   <p>
-    These findings raised concerns about the
-    tested NFC arrangement for automatic
-    identification during normal tray movement.
+    Successful detection was observed at calculated speeds of 2.73 cm/s and 3.61 cm/s, while detection was unsuccessful at 6.21 cm/s. We also recorded an estimated nursing tray-sliding speed of 23.25 cm/s. 
+  </p>
+
+  <p>
+    These results suggest that an NFC arrangement for automatic identification might require a larger reader range. However, the findings are limited to the tested tag, reader and setup. Further trials are required before drawing conclusions about NFC performance more generally. 
+  </p>
+
+  <p>
+    We also explored whether nearby NFC tags could be distinguished individually. During preliminary testing, with NFC tags being side by side, slightly tilting the phone towards the intended tag appeared to help identify it. This suggests that reader orientation may affect selective detection.
   </p>
 
   <h3>5.4 Technical Findings and Design Implications</h3>
 
   <p>
-    Our initial tests revealed limitations
-    in barcode scanning coverage and NFC
-    identification during movement.
+    Our initial experiments revealed different limitations. Barcode identification worked across the tested lighting conditions but became unsuccessful at larger lateral offsets. NFC supported close-range differentiated identification but showed limitations in terms of ease of readability.
   </p>
 
   <p>
-    We plan to investigate passive UHF RFID,
-    particularly how metal interference,
-    tag spacing and reader placement affect
-    identification accuracy.
+    These findings helped us identify questions that must be answered before selecting the final identification technology.
+    
+  <p>
+    We plan to investigate passive UHF RFID because it may allow multiple tags to be identified and without individual close range scanning. However, metal interference, tag spacing and exact shelf localisation remain important challenges, and we will therefore focus on whether UHF RFID can reliably distinguish individual metal trays and associate each tray with the correct shelf position.
   </p>
 
 </section>
@@ -1211,9 +1121,7 @@
   <h2>6. User Interface Development and Feedback</h2>
 
   <p>
-    We focused on two main features:
-    how nurses enter required trays and
-    how they are guided during retrieval.
+    We focussed on two features that we felt were the most crucial, how to initiate searching for trays on the app as well as guidance to the trays. We tested Prototypes 1 and 2 through in-depth conversations with 3 nurses and 1 vendor. 
   </p>
 
   <h3 id="entry-v1">
@@ -1221,9 +1129,7 @@
   </h3>
 
   <p>
-    We developed three initial interface
-    options: Vendor Entry, Photo and Extract,
-    and Manual Autocomplete.
+   We developed three initial user interface options to explore how nurses could create a digital checklist of the trays required for each surgery. Option A allowed vendors to enter the required trays before preparation. Option B allowed nurses to photograph a handwritten list and have the system extract the tray names. Option C allowed nurses to search for tray names and select from suggested matches.
   </p>
 
   <!-- FIGURE 15 -->
@@ -1241,15 +1147,11 @@
   
 
   <p>
-    Nurse feedback highlighted the importance
-    of including the vendor, procedure,
-    OT room and surgery time.
+ These options were presented to nurses to gather feedback on their usefulness and suitability for the existing workflow. Nurses generally preferred option A as it allowed them to view the required trays directly from vendors. They pointed out that more than one vendor could be involved in a case, highlighting the requirement for shared access. Additionally, they highlighted the importance of including details such as the vendor, procedure, OT room and surgery time. 
   </p>
 
   <p>
-    Further discussions showed that nurses
-    also need to know whether trays
-    are available for use.
+ Overall, the feedback suggested that the interface should be a shared platform between nurses and vendors, while providing clear information about tray requirements.
   </p>
 
   <h3 id="entry-v2">
@@ -1257,9 +1159,7 @@
   </h3>
 
   <p>
-    Based on the feedback, we refined the
-    interface to explore Shared Vendor Entry,
-    Scan-and-Edit and Screenshot Import.
+   Based on Prototype 1 feedback, we developed three revised approaches: Shared Vendor Entry, Scan-and-Edit and Screenshot Import. The latter two aim to reduce manual data entry while allowing nurses to review the extracted information.
   </p>
 
   <!-- FIGURE 16 -->
@@ -1276,9 +1176,11 @@
   </figure>
   
   <p>
-    These approaches aim to reduce repeated
-    data entry while improving access to tray
-    requirements and availability information.
+Nurses continued to prefer Shared Vendor Entry, but further discussions revealed that tray availability was equally important. Trays may be undergoing sterilisation, used in another operation or awaiting delivery.
+  </p>
+
+  <p>
+    This highlighted the need to involve TSSU staff in providing status updates. Future iterations will explore shared access, responsibility for updating information and case tracking without patient-identifiable data.
   </p>
 
   <h3 id="guidance-v1">
@@ -1286,9 +1188,7 @@
   </h3>
 
   <p>
-    We explored Camera-Based Arrows,
-    Direction and Proximity, and
-    Recorded Storage Location.
+    We also explored three guidance methods. Option A displayed directional arrows over a camera view to guide nurses towards the tray. Option B showed the direction and approximate distance to the tray. Option C described and displayed the room and shelf where the tray was recorded.
   </p>
 
   <!-- FIGURE 17 -->
@@ -1305,22 +1205,25 @@
   </figure>
   
   <p>
-    Nurse feedback suggested that visual
-    navigation may be useful for junior nurses,
-    while experienced nurses may prefer
-    direct location information.
+   These options were presented to nurses to understand which method would be most intuitive and useful during tray retrieval.
+  </p>
+
+  <p>
+    Feedback suggested that camera-based navigation could be particularly helpful for junior nurses who are unfamiliar with the storage layout. In contrast, experienced nurses may prefer direct location information, as they are familiar with general storage areas.
+  </p>
+
+  <p>
+    However, nurses also highlighted that knowing the general direction or storage room may not be sufficient. They often know which area to search but still struggle to identify the exact cupboard, shelf or tray among several similar-looking sets.
+  </p>
+
+  <p>
+    This suggested that precise tray localisation may be more useful than general navigation alone, particularly for nurses who are already familiar with the storage environment.
   </p>
 
   <h3 id="guidance-v2">
     6.2.2 Prototype 2: Retrieval Guidance
   </h3>
-
-  <p>
-    The revised interfaces place greater
-    emphasis on showing the exact storage
-    zone, shelf and slot.
-  </p>
-
+  
   <!-- FIGURE 18 -->
   <figure class="report-figure">
     <img
@@ -1332,12 +1235,55 @@
       <i>Prototype 2: Revised Retrieval Guidance Interfaces</i>
     </figcaption>
   </figure>
+  
+  <p>
+  The revised interfaces emphasised exact storage zones, shelves and slots, with visual highlighting to distinguish the required tray.
+  </p>
 
   <p>
-    Visual highlighting was also explored
-    to help nurses identify the correct tray
-    among surrounding sets.
+    Feedback favoured Options A and C for their clearer tray identification, while Option B's map could help when trays are stored in TSSU. These findings support the Retrofit Smart Shelf concept, where LED indicators highlight the required shelf position. Further testing will assess whether this guidance reduces retrieval time.
   </p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Observation</th>
+      <th>Interpretation</th>
+      <th>Design implication</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Junior nurses preferred camera guidance</td>
+      <td>They are less familiar with the storage layout</td>
+      <td>Provide optional navigation support</td>
+    </tr>
+    <tr>
+      <td>Experienced nurses preferred direct location information</td>
+      <td>They already know the general storage areas</td>
+      <td>Display room, shelf and slot immediately</td>
+    </tr>
+    <tr>
+      <td>Nurses preferred vendor entry</td>
+      <td>It could reduce repeated entry of tray requirements</td>
+      <td>Explore shared vendor access</td>
+    </tr>
+    <tr>
+      <td>Nurses wanted availability updates</td>
+      <td>Location alone does not confirm readiness</td>
+      <td>Display tray status alongside location</td>
+    </tr>
+    <tr>
+      <td>Nurses valued illuminated shelves</td>
+      <td>They need to distinguish the exact tray from similar-looking sets</td>
+      <td>Validate slot-level LED indicators</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  This table summarises the main observations, our interpretation of these findings and how they informed the proposed system design.
+</p>
 
 </section>
 
@@ -1353,52 +1299,41 @@
   <h3>7.1 Current Limitations</h3>
 
   <p>
-    We have not yet demonstrated reliable
-    identification of multiple metal trays
-    placed close together.
+    Several limitations remain following our initial testing. First, we have not demonstrated reliable identification of closely spaced metal trays, as metal interference and neighbouring tags may affect RFID detection. Second, RFID detection alone may not identify a tray's exact shelf position.
   </p>
 
   <p>
-    Exact-slot localisation also remains
-    unresolved, and our current tests
-    use simplified setups.
+    Our experiments were also conducted in simplified settings, while UI feedback was collected from a small number of participants. Therefore, the system's reliability and ability to reduce retrieval time remain unverified.
   </p>
 
   <h3>7.2 Planned Technical Development</h3>
 
   <p>
-    We will investigate UHF RFID under
-    conditions that better represent
-    the hospital storage environment.
+    We will investigate passive UHF RFID using wrapped metal trays, varying tag orientation, spacing and reader placement to identify a reliable configuration. If RFID cannot determine exact locations, we will explore combining it with slot occupancy sensors.
   </p>
 
   <p>
-    We plan to build a small-scale mock
-    shelf to test tray placement,
-    removal and relocation.
+    Next, we will build a small-scale shelf to test tray placement, removal and relocation. We will then integrate the identification system with the other aspects.
+  </p>
+
+  <p>
+    If identification remains unreliable, we will reconsider alternative technologies or reduce the number of monitored slots.
   </p>
 
   <h3>7.3 Planned User Testing</h3>
 
   <p>
-    Future testing will compare
-    preparation-list entry,
-    retrieval guidance and
-    retrieval confirmation.
-  </p>
-
-  <h3>7.4 Integrated System Validation</h3>
-
-  <p>
-    We will compare the integrated prototype
-    against a representative manual
-    retrieval process.
+    We will conduct task-based testing with nurses to compare methods of entering tray lists, locating trays and confirming retrieval. Task completion time, errors and user feedback will guide interface improvements.
   </p>
 
   <p>
-    Measurements will include retrieval time,
-    identification accuracy, location accuracy
-    and user effort.
+    We will also test how the system handles simultaneous searches by multiple nurses to ensure clear and accurate guidance.
+  </p>
+
+  <h3>7.4 Entire Plan: Gantt Chart </h3>
+
+  <p>
+    Our target is to locate each required tray within three minutes. The development schedule runs from November 2026 to April 2027, covering feasibility testing, system integration, user evaluation and final refinement.
   </p>
 
   <!-- FIGURE 19 -->
@@ -1421,33 +1356,15 @@
   <h2>8. Conclusion</h2>
 
   <p>
-    Through clinical observations,
-    stakeholder interviews and nurse surveys,
-    we identified uncertainty about tray
-    location and availability as an
-    important challenge during
-    preoperative preparation.
+   Through clinical research, we identified uncertainty about instrument tray location and availability as a significant challenge during preoperative preparation.
   </p>
 
   <p>
-    We explored several possible solutions
-    and selected the Smart Shelf as a
-    promising concept for further development.
+    We evaluated alternative concepts and selected the Retrofit Smart Shelf for further development. Preliminary barcode and NFC experiments revealed important identification limitations, while stakeholder feedback informed the design of shared preparation lists and precise retrieval guidance. Although an integrated system has not yet been validated, our work has established the clinical need, design requirements and technical priorities for the next phase.
   </p>
 
   <p>
-    Our initial barcode and NFC experiments
-    revealed practical identification
-    limitations, while feedback from nurses
-    and a vendor helped refine the
-    proposed workflow.
-  </p>
-
-  <p>
-    Moving forward, we will focus on
-    reliable tray identification,
-    accurate location detection
-    and integrated system testing.
+    Orthomatic ultimately aims to help nurses locate instrument trays more efficiently and reliably, reducing unnecessary searching and supporting surgical preparation.
   </p>
 
 </section>
@@ -1462,8 +1379,11 @@
   <h2>References</h2>
 
   <p>
-    Insert your complete academic
-    reference list here.
+    Thorlux Lighting. (n.d.). Operating theatres & clinical areas. Retrieved November 13, 2026, from https://www.thorlux.com/applications/healthcare/operating-theatres
+  </p>
+
+  <p>
+    STMicroelectronics. (n.d.). NFC technology - Essentials & insights. Retrieved November 13, 2026, from https://www.st.com/content/st_com/en/support/learning/essentials-and-insights/connectivity/nfc.html
   </p>
 
 </section>
