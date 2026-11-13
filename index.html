@@ -1,232 +1,1629 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project Title</title>
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <title>Orthomatic (EIM-435) | Interim Report</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
+  <!-- EDIC TEMPLATE -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css">
+
   <script type="module"
-    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js">
+  </script>
 
   <link rel="stylesheet" href="./index.css">
-
-  <link rel="stylesheet" href="./components/team-member/team-member.css">
-  <script type="module" src="./components/team-member/team-member.js"></script>
-
   <link rel="stylesheet" href="./components/table-of-content/table-of-content.css">
+  <link rel="stylesheet" href="./components/references/references.css">
+  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
 
+  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
   <script type="module" src="./components/image/image-component.js"></script>
 
-  <script type="module" src="./components/video/video.js"></script>
 
-  <link rel="stylesheet" href="./components/references/references.css">
+  <style>
+    :root {
+      --ortho-blue: #0b0738;
+      --ortho-orange: #70490a;
+      --ortho-text: #000000;
+      --ortho-muted: #68788b;
+      --ortho-border: #e1e7ed;
+    }
 
-  <link rel="stylesheet" href="./components/scroll-to-top/scroll-to-top.css">
-  <script src="./components/scroll-to-top/scroll-to-top.js"></script>
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <script src="./components/table-component/table-component.js"></script>
+    body {
+      color: #000000;
+      background: #fdfcff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.8;
+    }
 
-  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+    .content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 45px 35px;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--ortho-blue);
+    }
+
+    h1 {
+      font-size: 44px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 27px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      font-size: 21px;
+    }
+
+    h4 {
+      margin-top: 25px;
+      font-size: 17px;
+    }
+
+    p, li, td, blockquote {
+      color: #000000;
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    p {
+      margin-bottom: 18px;
+    }
+
+    .report-subtitle {
+      font-size: 19px;
+      color: #000000;
+      margin-top: 0;
+    }
+
+    .report-meta {
+      font-size: 13px;
+      color: #000000;
+    }
+
+    .report-section {
+      margin: 35px 0 50px;
+      scroll-margin-top: 20px;
+    }
+
+    .report-figure {
+      margin: 32px auto;
+      max-width: 850px;
+      text-align: center;
+    }
+
+    .report-figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 6px;
+    }
+
+    .report-figure figcaption,
+    .figure-title {
+      margin-top: 12px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #000000;
+      text-align: center;
+    }
+
+    .report-figure figcaption strong,
+    .figure-title strong {
+      color: var(--ortho-blue);
+    }
+
+    .image-placeholder {
+      margin: 24px auto;
+      padding: 45px 20px;
+      background: #f3f6fa;
+      border: 1px dashed #b6c4d2;
+      border-radius: 8px;
+      text-align: center;
+      color: #000000;
+      font-size: 14px;
+    }
+
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 25px 0;
+    }
+
+    .report-table th {
+      background: var(--ortho-blue);
+      color: #ffffff;
+      text-align: left;
+      padding: 12px;
+    }
+
+    .report-table td {
+      padding: 12px;
+      border-bottom: 1px solid var(--ortho-border);
+      color: #000000;
+    }
+
+    .report-table tr:nth-child(even) {
+      background: #f7f9fc;
+    }
+
+    .statement {
+      padding: 22px 25px;
+      border-left: 4px solid var(--ortho-orange);
+      background: #f3f6fa;
+      margin: 25px 0;
+      border-radius: 4px;
+    }
+
+    .statement p {
+      margin: 0;
+      color: #000000;
+    }
+
+    .toc-link {
+      color: var(--ortho-blue);
+      text-decoration: none;
+    }
+
+    .toc-link:hover {
+      color: var(--ortho-orange);
+      text-decoration: underline;
+    }
+
+    .appendix-section {
+      margin: 35px 0;
+    }
+
+    .appendix-note {
+      color: #000000;
+      font-size: 14px;
+    }
+
+    .report-footer {
+      text-align: center;
+      font-size: 13px;
+      color: #000000;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 700px) {
+      .content {
+        padding: 25px 18px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .report-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="content">
-    <h1>Project Title</h1>
 
-    <!-- This is the team member component use to display details about your team members -->
-    <div class="team-member-wrapper">
-      <team-member avatar="assets/blackranger.png" name="Black" department="Mechanical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/yellowranger.png" name="Yellow" department="Computer Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/redranger.png" name="Red" department="Electrical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/pinkranger.png" name="Pink" department="Biomedical Engineering"
-        year="1993"></team-member>
-      <team-member avatar="assets/blueranger.png" name="Blue" department="Chemical Engineering"
-        year="1993"></team-member>
-    </div>
+<div class="content">
 
-    <!-- This is a divide from the shoelace library for aesthetic purpose -->
-    <sl-divider></sl-divider>
+  <!-- PROJECT COVER -->
+  <header>
+    <h1>Orthomatic (EIM-435)</h1>
 
-    <!-- This is the table-of-content component use to define all of the link directly to each section -->
-    <div class="table-of-content">
-      <h2>Table of Contents</h2>
-      <sl-tree>
-        <sl-tree-item expanded>
-          <a href="#section-header-1">1. Section Header 1</a>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-1">1.1. Sub-section Header 1</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-1-header-2">1.2. Sub-section Header 2</a>
-          </sl-tree-item>
-        </sl-tree-item>
+    <p class="report-subtitle">
+      Improving Orthopaedic Instrument Tray
+      Identification and Retrieval
+    </p>
 
-        <sl-tree-item expanded>
-          <a href="#section-header-2">2. Section Header 1</a>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-1">2.1. Sub-section Header 1</a>
-          </sl-tree-item>
-          <sl-tree-item>
-            <a href="#sub-section-2-header-2">2.2. Sub-section Header 2</a>
-          </sl-tree-item>
-        </sl-tree-item>
+    <p class="report-meta">
+      CDE4301 Interim Project Report | D-HIP 
+    </p>
+  </header>
 
+  <sl-divider></sl-divider>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="table-of-content">
+    <h2>Table of Contents</h2>
+
+    <sl-tree>
+      <sl-tree-item>
+        <a class="toc-link" href="#abstract">Abstract</a>
+      </sl-tree-item>
+
+      <sl-tree-item expanded>
+        <a class="toc-link" href="#clinical">
+          1. Clinical Background and Problem Context
+        </a>
         <sl-tree-item>
-          <a href="#references">References</a>
+          <a class="toc-link" href="#trays">1.1 Orthopaedic Instrument Trays</a>
         </sl-tree-item>
-      </sl-tree>
-    </div>
-    <sl-divider></sl-divider>
+        <sl-tree-item>
+          <a class="toc-link" href="#stakeholders">1.2 Stakeholders</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#clinical-research">1.3 Clinical Research</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#nurse-findings">1.4 Findings from Nurses</a>
+        </sl-tree-item>
+      </sl-tree-item>
 
-    <div>
+      <sl-tree-item expanded>
+        <a class="toc-link" href="#problem">
+          2. Problem Identification and Prioritisation
+        </a>
+        <sl-tree-item>
+          <a class="toc-link" href="#root-cause">2.1 Root Cause Analysis</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#prioritisation">2.2 Problem Prioritisation</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#problem-statement">2.3 Problem Statement</a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#needs-statement">2.4 Needs Statement</a>
+        </sl-tree-item>
+      </sl-tree-item>
 
-      <!-- This is an example of what a section might look like -->
-      <div id="section-header-1">
-        <h2> 1. Section Header 1 </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna
-          aliqua. Tincidunt ornare massa eget egestas. At tellus at urna condimentum mattis pellentesque id nibh tortor.
-          Elementum sagittis vitae et leo duis ut diam. Morbi tristique senectus et netus et malesuada fames.
-          Suspendisse
-          ultrices gravida dictum fusce ut placerat orci. Risus nullam eget felis eget nunc lobortis mattis aliquam
-          faucibus
-          (Brody, 2007). Eget sit amet tellus cras adipiscing enim eu turpis egestas. Aliquet nibh praesent tristique
-          magna
-          sit amet purus. Adipiscing bibendum est ultricies integer quis auctor elit sed. Fermentum et sollicitudin ac
-          orci
-          phasellus egestas tellus rutrum. At in tellus integer feugiat scelerisque varius morbi enim nunc. Volutpat
-          blandit
-          aliquam etiam erat velit scelerisque in. Id diam maecenas ultricies mi eget mauris pharetra et. Nec dui nunc
-          mattis
-          enim ut tellus elementum sagittis vitae.
-        </p>
-      </div>
+      <sl-tree-item>
+        <a class="toc-link" href="#value">
+          3. Value Proposition and Design Requirements
+        </a>
+      </sl-tree-item>
 
-      <div id="sub-section-1-header-1">
-        <h3>1.1 Sub-section Header 1</h3>
-        <p>
-          Ultrices dui sapien eget mi. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Dolor purus non enim
-          praesent elementum facilisis. Lacus vestibulum sed arcu non odio euismod lacinia at. Metus aliquam eleifend mi
-          in nulla. Lacus sed viverra tellus in hac habitasse platea. Varius quam quisque id diam vel quam elementum
-          pulvinar. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Diam ut venenatis tellus in metus
-          vulputate. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Venenatis lectus magna
-          fringilla
-          urna. In nisl nisi scelerisque eu ultrices. Velit egestas dui id ornare arcu odio ut sem nulla. Quam id leo in
-          vitae. Egestas congue quisque egestas diam in arcu cursus euismod quis. Porttitor leo a diam sollicitudin
-          tempor
-          id eu nisl.
-        </p>
-      </div>
+      <sl-tree-item>
+        <a class="toc-link" href="#concepts">
+          4. Concept Generation and Selection
+        </a>
+      </sl-tree-item>
 
-      <div id="sub-section-1-header-2">
-        <h3>1.2 Sub-section Header 2</h3>
-        <p>
-          Fermentum dui faucibus in ornare quam viverra orci. Donec ultrices tincidunt arcu non sodales. A diam maecenas
-          sed enim ut sem viverra. Semper viverra nam libero justo laoreet sit. Mi sit amet mauris commodo quis. Auctor
-          augue mauris augue neque gravida in fermentum et. Auctor elit sed vulputate mi sit amet. Maecenas pharetra
-          convallis posuere morbi leo urna. Sem nulla pharetra diam sit amet nisl. Id nibh tortor id aliquet lectus.
-          Nibh
-          nisl condimentum id venenatis a condimentum vitae sapien. Convallis posuere morbi leo urna molestie at
-          elementum.
-        </p>
+      <sl-tree-item>
+        <a class="toc-link" href="#technical-testing">
+          5. Initial Prototype Development and Testing
+        </a>
+      </sl-tree-item>
 
-        <!-- This is an example of how you might use the image component -->
-        <image-component tag="image" source="assets/requirement.png"
-          subtitle="Image 1: iDP suggested pathway"></image-component>
-      </div>
-    </div>
+      <sl-tree-item expanded>
+        <a class="toc-link" href="#ui">
+          6. User Interface Development and Feedback
+        </a>
+        <sl-tree-item>
+          <a class="toc-link" href="#entry-v1">
+            6.1.1 Prototype 1: Entering Required Trays
+          </a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#entry-v2">
+            6.1.2 Prototype 2: Entering Required Trays
+          </a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#guidance-v1">
+            6.2.1 Prototype 1: Retrieval Guidance
+          </a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#guidance-v2">
+            6.2.2 Prototype 2: Retrieval Guidance
+          </a>
+        </sl-tree-item>
+      </sl-tree-item>
 
+      <sl-tree-item>
+        <a class="toc-link" href="#future">
+          7. Limitations and Future Development Plan
+        </a>
+      </sl-tree-item>
 
-    <br />
-    <br />
-    <sl-divider></sl-divider>
-    <div>
-      <div id="section-header-2">
-        <h2>2. Section Header 2</h2>
-        <p>
-          Ornare arcu dui vivamus arcu felis bibendum ut tristique et. Mi proin sed libero enim sed faucibus turpis in
-          eu. Odio ut sem nulla pharetra diam sit. Nibh cras pulvinar mattis nunc sed blandit libero. Lacus sed viverra
-          tellus in hac habitasse platea dictumst vestibulum. At augue eget arcu dictum varius duis. Mauris ultrices
-          eros in cursus turpis massa (Lindberg, 1967). Libero nunc consequat interdum varius sit amet mattis. Ut ornare
-          lectus sit amet est placerat in egestas erat. Elementum curabitur vitae nunc sed. Proin nibh nisl condimentum
-          id venenatis a condimentum vitae sapien (Chamberlin et al., 2008). Vitae tempus quam pellentesque nec nam
-          aliquam sem.
-        </p>
-      </div>
+      <sl-tree-item>
+        <a class="toc-link" href="#conclusion">8. Conclusion</a>
+      </sl-tree-item>
 
-      <div id="sub-section-2-header-1">
-        <h3>2.1. Sub-section Header 1</h3>
-        <p>
-          Pellentesque nec nam aliquam sem et tortor consequat. Et netus et malesuada fames ac turpis egestas maecenas.
-          Eu tincidunt tortor aliquam nulla facilisi. Nunc aliquet bibendum enim facilisis gravida. Elementum pulvinar
-          etiam non quam lacus (Moll et al., 2011; Parker & Fox, 2010). Blandit cursus risus at ultrices mi. Arcu dui
-          vivamus arcu felis bibendum ut tristique. Porttitor rhoncus dolor purus non enim praesent elementum facilisis.
-          Mauris in aliquam sem fringilla. Non quam lacus suspendisse faucibus. Tristique senectus et netus et malesuada
-          fames ac. <a href="#image">Link to the image above</a>
-        </p>
+      <sl-tree-item>
+        <a class="toc-link" href="#references">References</a>
+      </sl-tree-item>
 
-        <!-- This is an example of how you might use the video component -->
-        <video-component tag="rick" source="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          subtitle="Video: Never gonna give you up?"></video-component>
-      </div>
-
-      <div id="sub-section-2-header-2">
-        <h3>2.2. Sub-section Header 2</h3>
-        <p>
-          Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Dignissim convallis aenean et tortor at
-          risus viverra adipiscing. Facilisi nullam vehicula ipsum a arcu cursus. Adipiscing elit pellentesque
-          habitant
-          morbi tristique senectus et netus. Turpis massa tincidunt dui ut ornare lectus. Suspendisse sed nisi lacus
-          sed. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Ut ornare lectus sit amet est
-          placerat in egestas. Magna fringilla urna porttitor rhoncus. Imperdiet dui accumsan sit amet.
-        </p>
-
-        <!-- This is an example of how you might use the table component -->
-        <table-component subtitle="Table: Demo table">
-          <div id="table-1"></div>
-        </table-component>
-      </div>
-    </div>
-
-    <!-- This is an example of how you can use the references component to create references -->
-    <div id="references" class="references">
-      <sl-divider></sl-divider>
-      <h2>References</h2>
-      <ul>
-        <li>
-          Brody, J. E. (2007, December 11). Mental reserves keep brain agile. The New York Times. Retrieved from
-          http://www.dowjones.com/factiva/
-        </li>
-        <li>
-          Chamberlin, J., Novotney, A., Packard, E., & Price, M. (2008, May). Enhancing worker well-being: Occupational
-          health psychologists convene to share their research on work, stress, and health. Monitor on Psychology,
-          39(5), 26-29.
-        </li>
-        <li>
-          Jones, T. J., & Fields, N. (2003). Emotional quotient and personality. E-Journal of Applied Psychology, 2(2),
-          38-45. Retrieved from http://ejournalappliedpsyc/index.php/ejap
-        </li>
-      </ul>
-    </div>
+      <sl-tree-item expanded>
+        <a class="toc-link" href="#appendix">Appendices</a>
+        <sl-tree-item>
+          <a class="toc-link" href="#appendix-a">
+            Appendix A. Clinical Research
+          </a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#appendix-b">
+            Appendix B. Problem Prioritisation
+          </a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#appendix-c">
+            Appendix C. Concept Evaluation
+          </a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#appendix-d">
+            Appendix D. Technical Testing
+          </a>
+        </sl-tree-item>
+        <sl-tree-item>
+          <a class="toc-link" href="#appendix-e">
+            Appendix E. User Interface Testing
+          </a>
+        </sl-tree-item>
+      </sl-tree-item>
+    </sl-tree>
   </div>
 
-  <!-- This is the code to display the scroll to top button for ergonomic -->
-  <!-- You can leave it as it is, or if you don't like its aesthetics you can also just delete it, -->
-  <!-- but it might reduce the user experience. -->
-  <sl-button class="scroll-to-top" variant="primary" size="medium" circle onclick="scrollToTop()">
-    <sl-icon name="arrow-up" label="Settings"></sl-icon>
-  </sl-button>
+  <sl-divider></sl-divider>
 
-  <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-  <script type="module" src="./components/table-component/table-component.js"></script>
+  <!-- ABSTRACT -->
+  <section id="abstract" class="report-section">
+    <h2>Abstract</h2>
+
+    <p>
+      Orthopaedic surgeries require a variety of specialised
+      instruments, which are organised into trays and prepared
+      before each operation. Depending on the procedure,
+      these trays may come from the hospital's own inventory
+      or external vendors.
+    </p>
+
+    <p>
+      However, locating these trays is not straightforward.
+      Trays may be stored in different areas, moved between
+      operating theatres or undergoing sterilisation.
+      Many trays also look similar, making it difficult
+      to identify the correct set quickly.
+    </p>
+
+    <p>
+      Through clinical observations, stakeholder interviews
+      and surveys, our team identified a key problem:
+      limited visibility of the location and availability
+      of orthopaedic instrument trays during preoperative
+      preparation.
+    </p>
+
+    <p>
+      Orthomatic aims to address this uncertainty by
+      exploring ways to improve tray identification,
+      location tracking and retrieval guidance.
+      Our target is to reduce preoperative tray-search
+      time to no more than three minutes per tray.
+    </p>
+
+    <p>
+      This semester, we focused on understanding the
+      problem, identifying design requirements,
+      generating possible solutions and conducting
+      initial technical and user interface tests.
+    </p>
+  </section>
+
+  <sl-divider></sl-divider>
+
+  <!-- SECTION 1 -->
+  <section id="clinical" class="report-section">
+    <h2>1. Clinical Background and Problem Context</h2>
+
+    <h3 id="trays">1.1 Orthopaedic Instrument Trays</h3>
+
+
+    <figure class="report-figure">
+      <img
+        src="assets/figure1-trays.png"
+        alt="Orthopaedic instrument trays">
+    
+      <figcaption>
+        <strong>Figure 1.</strong>
+        <i>Examples of Orthopaedic Instrument Trays</i>
+      </figcaption>
+    </figure>
+
+    <p>
+      Orthopaedic surgeries use specialised instruments for procedures such as total knee replacement, hip replacement, spinal surgery and fracture repair. These instruments are organised into trays according to their function, procedure and manufacturer/vendors. One specialised set can be made up of multiple trays and some surgeries may require more than one set from different vendors.
+    </p>
+    <p>
+      In our preliminary interviews with surgeons, we discovered that orthopaedic surgeons have the option to choose which vendors’ instruments and implants they want to use for a patient. Other than for simple procedures, vendors will send in representatives (reps) to guide OT staff on instrument use. Surgeons choose vendors depending on vendor relationship, quality of service and other factors, at times, it may even be random. 
+    </p>
+
+    <p>
+      Each tray may contain many instruments and can be heavy, making handling and retrieval physically demanding. The number of trays required also varies between procedures. Our research identified approximately 6-10 trays for total knee replacement, 5-9 for partial hip replacement, 15-20 for spinal surgery and 5-10 for fracture surgery. Given an estimate of 50,000 to 55,000 orthopaedic surgeries in Singapore per year, and 7 to 20 trays prepared per surgery, this means about 250,000 to 715,000 trays used per year. These figures are estimates, as actual requirements depend on the procedure, surgeon and vendor.
+    </p>
+
+    <p>
+      Vendor instrument trays can either be consignment sets or warehouse sets. Consignment sets are vendor-owned but stored in hospital premises. Warehouse sets are sent to the hospital by the vendors whenever they are needed. These trays rotate between hospitals based on where they are needed. Instrument trays range in the price of thousands, which is why they remain vendor owned. In addition to vendor instrument trays, surgical teams may require vendor implant sets, the hospitals’ own tray sets, and consumables. 
+    </p>
+    <p>
+      Overall, this results in a complex preparation process, especially since multiple surgeries are scheduled back to back within the same day. Any delays or breaks in the workflow may cause consequences such as postponement of surgeries and in the worst case, compromise of patient safety.
+    </p>
+
+    <h3 id="stakeholders">
+      1.2 Stakeholders Involved in Tray Preparation
+    </h3>
+
+    <p>
+      Preparing instrument trays involves several
+      groups of people, each with different
+      responsibilities.
+    </p>
+
+    <p>
+      Surgeons determine the required instruments,
+      vendors provide specialised sets, and TSSU
+      staff handle receiving, washing, packing
+      and sterilisation. OT nurses coordinate
+      these activities to ensure that the required
+      trays are available for surgery.
+    </p>
+
+    <figure class="report-figure">
+      <img
+        src="assets/figure2-stakeholders.png"
+        alt="Orthopaedic instrument trays">
+    
+      <figcaption>
+        <strong>Figure 2.</strong>
+        <i>Stakeholders Involved in Orthopaedic Tray Preparation</i>
+      </figcaption>
+    </figure>
+
+    <h3 id="clinical-research">
+      1.3 Understanding the Problem Through Clinical Research
+    </h3>
+
+    <p>
+      We carried out interviews, hospital visits,
+      procedure observations, nurse shadowing
+      and a survey to understand the current
+      tray preparation workflow.
+    </p>
+
+    <p>
+      Our interim research included 23 stakeholder
+      interviews, five procedure observations
+      and 30 nurse survey responses.
+    </p>
+
+    <figure class="report-figure">
+      <img
+        src="assets/figure3-research.png"
+        alt="Clinical research and discovery activities">
+    
+      <figcaption>
+        <strong>Figure 3.</strong>
+        <i>Clinical Research and Discovery Activities</i>
+      </figcaption>
+    </figure>
+  
+    
+    <figure class="report-figure">
+      <img
+        src="assets/figure4-workflow.png"
+        alt="Orthopaedic instrument tray preparation workflow">
+      
+      <figcaption>
+        <strong>Figure 4.</strong>
+        <i>Current Orthopaedic Instrument Tray Preparation Workflow</i>
+      </figcaption>
+    </figure>
+    
+<!-- CONTINUATION AFTER FIGURE 4 -->
+
+<p>
+  During our hospital visits, we observed trays stored
+  in OT rooms, OT corridors and storage areas in TSSU.
+  Some trays were stacked on racks or trolleys, while
+  others were placed in temporary storage locations.
+  In the OT, these trays are sometimes organised by
+  vendor, but due to space limitations, trays may be
+  placed wherever space is available. After sterilisation,
+  trays can also be temporarily stored in carts in TSSU
+  before being transported to the OT.
+</p>
+
+<!-- FIGURE 5: HOSPITAL STORAGE OBSERVATIONS -->
+
+<figure class="report-figure">
+  <img
+    src="assets/figure5-storage.png"
+    alt="Orthopaedic instrument trays stored in hospital areas">
+
+  <figcaption>
+    <strong>Figure 5.</strong>
+    <i>Observed Storage of Orthopaedic Instrument Trays in Hospital Areas</i>
+  </figcaption>
+</figure>
+
+
+<p>
+  We also observed handwritten lists and notes being
+  used to communicate which trays were required or
+  had already been prepared.
+</p>
+
+<!-- FIGURE 6: HANDWRITTEN TRAY LISTS -->
+
+<figure class="report-figure">
+  <img
+    src="assets/figure6-handwritten.png"
+    alt="Handwritten surgical instrument tray preparation lists">
+
+  <figcaption>
+    <strong>Figure 6.</strong>
+    <i>Handwritten Tray Preparation Lists and Communication Notes</i>
+  </figcaption>
+</figure>
+
+
+<p>
+  These observations showed that locating a tray
+  is not simply a matter of checking a fixed storage
+  position. Its location may change throughout the day,
+  depending on the surgery schedule, sterilisation
+  process and movement of trays between different
+  parts of the hospital.
+</p>
+
+<p>
+  Nurses must write out the trays needed for each
+  surgery, check the storage areas for the required
+  trays and transport them to their respective OTs.
+  As each tray is wrapped in layers of sterile
+  wrapping, the trays look very similar, leaving
+  nurses to rely on reading each label individually.
+</p>
+
+<h3 id="nurse-findings">1.4 Findings from Nurses</h3>
+
+<p>
+  Our interviews and survey highlighted several
+  recurring difficulties during tray preparation.
+</p>
+
+<p>
+  First, nurses may need to search different locations
+  because trays are moved or temporarily stored
+  in other areas.
+</p>
+
+<p>
+  Second, many trays look similar, while labels
+  may be small or inconsistent between vendors.
+</p>
+
+<p>
+  Third, nurses may not know whether a tray is
+  available. It may still be undergoing sterilisation,
+  in use or awaiting delivery.
+</p>
+
+<p>
+  Finally, nurses often need to contact TSSU staff,
+  vendors or other nurses to confirm tray locations
+  and availability.
+</p>
+
+</section>
+
+<sl-divider></sl-divider>
+
+
+<!-- SECTION 2: PROBLEM IDENTIFICATION -->
+
+<section id="problem" class="report-section">
+
+  <h2>2. Problem Identification and Prioritisation</h2>
+
+  <h3 id="root-cause">2.1 Root Cause Analysis</h3>
+
+  <p>
+    We conducted a root cause analysis to identify
+    the main factors contributing to prolonged
+    tray preparation and retrieval.
+  </p>
+
+  <!-- FIGURE 7 -->
+
+
+  <figure class="report-figure">
+    <img
+      src="assets/figure7-root-cause.png"
+      alt="Root Cause Analysis">
+
+    <figcaption>
+      <strong>Figure 7.</strong>
+      <i>Root Cause Analysis of Prolonged Tray Preparation</i>
+    </figcaption>
+  </figure>
+
+  <h3 id="prioritisation">2.2 Problem Prioritisation</h3>
+
+  <p>
+    We used a problem prioritisation matrix to
+    compare different areas of intervention.
+    Each problem was assessed based on time
+    impact (40%), technical feasibility (35%)
+    and ease of implementation (25%).
+  </p>
+
+  <table class="report-table">
+    <thead>
+      <tr>
+        <th>Problem Area</th>
+        <th>Weighted Score</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Surgeon-centred decision-making</td>
+        <td>1.80</td>
+      </tr>
+      <tr>
+        <td>Manual workflow</td>
+        <td>4.25</td>
+      </tr>
+      <tr>
+        <td>Limited storage infrastructure</td>
+        <td>2.85</td>
+      </tr>
+      <tr>
+        <td>Large tray variety</td>
+        <td>2.60</td>
+      </tr>
+      <tr>
+        <td>Tray design</td>
+        <td>2.25</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>
+    Manual workflow received the highest
+    weighted score. However, further analysis
+    showed that manual workflow describes
+    the current process rather than the
+    underlying problem.
+  </p>
+
+  <p>
+    Through stakeholder interviews and clinical
+    observations, we identified uncertainty
+    about tray location and availability
+    as a key issue.
+  </p>
+
+  <h3 id="problem-statement">
+    2.3 Refined Problem Statement
+  </h3>
+
+  <div class="statement">
+    <p>
+      OT nurses face uncertainty about the location
+      and availability of orthopaedic instrument
+      trays during preoperative preparation,
+      leading to additional searching, repeated
+      communication and time spent gathering
+      the required instruments.
+    </p>
+  </div>
+
+  <h3 id="needs-statement">2.4 Needs Statement</h3>
+
+  <div class="statement">
+    <p>
+      A seamless, reliable way to identify and
+      retrieve surgical instrument trays during
+      preoperative preparation, such that search
+      time is no more than three minutes per tray,
+      so hospital staff can dedicate more time
+      to patient care.
+    </p>
+  </div>
+
+</section>
+
+<sl-divider></sl-divider>
+
+
+<!-- SECTION 3: VALUE PROPOSITION -->
+
+<section id="value" class="report-section">
+
+  <h2>3. Value Proposition and Design Requirements</h2>
+
+  <h3>3.1 Value Proposition</h3>
+
+  <p>
+    Orthomatic aims to reduce the uncertainty
+    nurses face when locating orthopaedic
+    instrument trays.
+  </p>
+
+  <p>
+    Our proposed value lies in combining
+    tray identification, location information
+    and physical retrieval guidance into
+    a workflow designed around the needs
+    of OT nurses.
+  </p>
+
+  <p>
+    Rather than replacing existing hospital
+    systems, Orthomatic aims to fit into the
+    current workflow and support the specific
+    task of identifying and retrieving
+    the correct tray.
+  </p>
+
+
+<!-- SECTION 3.2: DESIGN REQUIREMENTS -->
+
+<h3>3.2 Design Requirements</h3>
+
+<p>
+  Based on our clinical research, we identified
+  the following needs criteria.
+</p>
+
+<!-- MUST-HAVE REQUIREMENTS -->
+
+<h4>Must Have</h4>
+
+<table class="report-table">
+  <thead>
+    <tr>
+      <th>S/N</th>
+      <th>Category</th>
+      <th>Criteria</th>
+      <th>Rationale</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Safety</td>
+      <td>
+        Must maintain compatibility with
+        <strong>existing surgical tray sterilisation
+        processes</strong> without compromising sterility
+      </td>
+      <td>
+        Any modifications to surgical trays must
+        preserve existing sterilisation standards
+        to ensure patient safety
+      </td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>Efficiency</td>
+      <td>
+        Must enable users to locate a required
+        surgical tray <strong>within 3 minutes</strong>
+      </td>
+      <td>
+        If the location of a tray is known,
+        nurses currently take about 3–5 minutes
+        to locate it. We want to make all corner
+        cases where nurses struggle for 30 minutes
+        to locate one tray meet at least this standard
+      </td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Learning Curve</td>
+      <td>
+        Must enable new users to independently
+        locate surgical trays using the system
+        <strong>within 1 month</strong>
+      </td>
+      <td>
+        Consignment team nurses currently require
+        approximately 1–3 months to familiarise
+        themselves with tray names and locations
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- GOOD-TO-HAVE REQUIREMENTS -->
+
+<h4>Good-to-Have</h4>
+
+<table class="report-table">
+  <thead>
+    <tr>
+      <th>S/N</th>
+      <th>Category</th>
+      <th>Criteria</th>
+      <th>Rationale</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Sustainability</td>
+      <td>
+        Solution is <strong>reusable</strong>
+        rather than one-off
+      </td>
+      <td>
+        Could reduce long-term cost
+        and unnecessary waste
+      </td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td>Efficiency</td>
+      <td>
+        <strong>Reduces double checking</strong>
+        by nurses
+      </td>
+      <td>
+        Nurses spend extra time double checking
+        the cases prepared by previous shifts
+        due to the high possibility of human error
+      </td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td>Efficacy</td>
+      <td>
+        Ability to track
+        <strong>individual instruments</strong>
+      </td>
+      <td>
+        When instruments go missing or are
+        dropped during surgery, nurses can
+        easily track the location of another
+        tray with the instrument without
+        expert knowledge of tray contents
+        in case of emergency
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  These targets will be a guide for future testing
+  and could be refined depending on feedback
+  along the way.
+</p>
+
+
+</section>
+
+<sl-divider></sl-divider>
+
+
+<!-- SECTION 4: CONCEPT DEVELOPMENT -->
+
+<section id="concepts" class="report-section">
+
+  <h2>4. Concept Generation and Selection</h2>
+
+  <h3>4.1 Brainstorming and Concept Exploration</h3>
+
+  <p>
+    We used SCAMPER, BruteThink and the ACE
+    framework to generate and organise
+    possible solutions.
+  </p>
+
+  <p>
+    We identified five main system functions:
+    tray identification, location detection,
+    user interface, retrieval guidance
+    and retrieval confirmation.
+  </p>
+
+  <!-- FIGURE 8 -->
+
+  <figure class="report-figure">
+    <img
+      src="assets/figure8-morphology.png"
+      alt="Morphological Chart">
+  
+    <figcaption>
+      <strong>Figure 8.</strong>
+      <i>Morphological Chart of Proposed System Functions and Technologies</i>
+    </figcaption>
+  </figure>
+
+  <h3>4.2 Concept A: Smart Shelf</h3>
+
+  <p>
+    The Smart Shelf is designed to identify
+    trays, record their locations and guide
+    nurses to the correct shelf position.
+  </p>
+
+  <!-- FIGURE 9 -->
+  
+  <figure class="report-figure">
+    <img
+      src="assets/figure9-smart-shelf.png"
+      alt="Smart Shelf Concept">
+
+    <figcaption>
+      <strong>Figure 9.</strong>
+      <i>Concept A: Smart Shelf</i>
+    </figcaption>
+  </figure>
+
+  <h3>4.3 Concept B: Handheld Finder</h3>
+
+  <p>
+    The Handheld Finder is a portable device
+    that nurses could use to search for tagged trays.
+  </p>
+
+  <p>
+    A handheld reader could detect nearby trays
+    and provide feedback to guide nurses towards
+    the required set.
+  </p>
+
+  <!-- FIGURE 10 -->
+
+  <figure class="report-figure">
+    <img
+      src="assets/figure10-handheld.png"
+      alt="Handheld Finder Concept">
+
+    <figcaption>
+      <strong>Figure 10.</strong>
+      <i>Concept B: Handheld Finder</i>
+    </figcaption>
+  </figure>
+
+
+  <h3>4.4 Concept Evaluation</h3>
+
+  <p>
+    Initial nurse feedback supported further
+    investigation of the Smart Shelf because
+    shelf indicators could provide direct
+    retrieval guidance.
+  </p>
+
+  <p>
+    The Handheld Finder raised concerns about
+    requiring nurses to collect and operate
+    an additional device.
+  </p>
+
+  <p>
+    We therefore selected the Smart Shelf as
+    our lead concept and refined it into a
+    retrofit system that could be attached
+    to existing shelves.
+  </p>
+
+  <h3>4.5 Retrofit Smart Shelf Locator</h3>
+
+  <p>
+    The proposed Retrofit Smart Shelf Locator
+    combines tray identification, shelf sensors,
+    LED indicators and a mobile application.
+  </p>
+
+  <p>
+    A backend system links tray IDs to their
+    recorded shelf locations, allowing nurses
+    to search for trays and receive visual
+    guidance during retrieval.
+  </p>
+
+  <!-- FIGURE 11 -->
+
+  <figure class="report-figure">
+  <img
+    src="assets/figure11-retrofit.png"
+    alt="Retrofit Smart Shelf Locator">
+
+  <figcaption>
+    <strong>Figure 11.</strong>
+    <i>Proposed Retrofit Smart Shelf Locator and System Architecture</i>
+  </figcaption>
+</figure>
+
+
+  <p>
+    Automatic tray identification and
+    exact-slot localisation remain development
+    objectives requiring further validation.
+  </p>
+
+</section>
+
+<sl-divider></sl-divider>
+
+
+<!-- SECTION 5: TECHNICAL PROTOTYPING -->
+
+<section id="technical-testing" class="report-section">
+
+  <h2>5. Initial Prototype Development and Testing</h2>
+
+  <p>
+    We began prototyping by investigating
+    individual functions before building
+    the complete system.
+  </p>
+
+  <h3>5.1 Barcode Testing: Lighting Conditions</h3>
+
+  <p>
+    We tested barcode identification at a
+    fixed distance of 30 cm under four
+    lighting conditions.
+  </p>
+
+
+
+  <table class="report-table">
+    <thead>
+      <tr>
+        <th>Illuminance</th>
+        <th>Distance</th>
+        <th>Detected</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr><td>53 lux</td><td>30 cm</td><td>Yes</td></tr>
+      <tr><td>150 lux</td><td>30 cm</td><td>Yes</td></tr>
+      <tr><td>430 lux</td><td>30 cm</td><td>Yes</td></tr>
+      <tr><td>3000 lux</td><td>30 cm</td><td>Yes</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    Barcode detection succeeded under all tested
+    lighting conditions. Further repeated trials
+    are needed to establish reliability.
+  </p>
+
+  <h3>5.2 Barcode Testing: Scanning Coverage</h3>
+
+  <p>
+    We investigated whether a fixed camera
+    could identify barcodes at different
+    lateral positions and orientations.
+  </p>
+
+
+  <table class="report-table">
+    <thead>
+      <tr>
+        <th>Angle</th>
+        <th>15 cm Offset</th>
+        <th>45 cm Offset</th>
+        <th>60 cm Offset</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr><td>90°</td><td>Yes</td><td>No</td><td>No</td></tr>
+      <tr><td>60°</td><td>Yes</td><td>No</td><td>No</td></tr>
+      <tr><td>45°</td><td>Yes</td><td>No</td><td>No</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    Scanning succeeded at the 15 cm offset
+    but failed at larger offsets under
+    our tested setup.
+  </p>
+
+  <h3>5.3 NFC Testing: Moving Tray Identification</h3>
+
+  <p>
+    We tested whether NFC could identify
+    a tag while it moved across a 10 cm path.
+  </p>
+
+  <!-- FIGURE 14 -->
+
+  <table class="report-table">
+    <thead>
+      <tr>
+        <th>Trial</th>
+        <th>Speed</th>
+        <th>Detected</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr><td>1</td><td>2.73 cm/s</td><td>Yes</td></tr>
+      <tr><td>2</td><td>3.61 cm/s</td><td>Yes</td></tr>
+      <tr><td>3</td><td>6.21 cm/s</td><td>No</td></tr>
+      <tr><td>Nurse handling estimate</td><td>23.25 cm/s</td><td>No</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    These findings raised concerns about the
+    tested NFC arrangement for automatic
+    identification during normal tray movement.
+  </p>
+
+  <h3>5.4 Technical Findings and Design Implications</h3>
+
+  <p>
+    Our initial tests revealed limitations
+    in barcode scanning coverage and NFC
+    identification during movement.
+  </p>
+
+  <p>
+    We plan to investigate passive UHF RFID,
+    particularly how metal interference,
+    tag spacing and reader placement affect
+    identification accuracy.
+  </p>
+
+</section>
+
+<sl-divider></sl-divider>
+
+
+<!-- SECTION 6: USER INTERFACE -->
+
+<section id="ui" class="report-section">
+
+  <h2>6. User Interface Development and Feedback</h2>
+
+  <p>
+    We focused on two main features:
+    how nurses enter required trays and
+    how they are guided during retrieval.
+  </p>
+
+  <h3 id="entry-v1">
+    6.1.1 Prototype 1: Entering Required Trays
+  </h3>
+
+  <p>
+    We developed three initial interface
+    options: Vendor Entry, Photo and Extract,
+    and Manual Autocomplete.
+  </p>
+
+  <!-- FIGURE 15 -->
+
+  <figure class="report-figure">
+    <img
+      src="assets/figure15-entry-v1.png"
+      alt="Prototype 1 Entering Required Trays">
+  
+    <figcaption>
+      <strong>Figure 12.</strong>
+      <i>Prototype 1: Initial Interfaces for Entering Required Trays</i>
+    </figcaption>
+  </figure>
+  
+
+  <p>
+    Nurse feedback highlighted the importance
+    of including the vendor, procedure,
+    OT room and surgery time.
+  </p>
+
+  <p>
+    Further discussions showed that nurses
+    also need to know whether trays
+    are available for use.
+  </p>
+
+  <h3 id="entry-v2">
+    6.1.2 Prototype 2: Entering Required Trays
+  </h3>
+
+  <p>
+    Based on the feedback, we refined the
+    interface to explore Shared Vendor Entry,
+    Scan-and-Edit and Screenshot Import.
+  </p>
+
+  <!-- FIGURE 16 -->
+
+  <figure class="report-figure">
+    <img
+      src="assets/figure16-entry-v2.png"
+      alt="Prototype 2 Entering Required Trays">
+  
+    <figcaption>
+      <strong>Figure 13.</strong>
+      <i>Prototype 2: Revised Interfaces for Entering Required Trays</i>
+    </figcaption>
+  </figure>
+  
+  <p>
+    These approaches aim to reduce repeated
+    data entry while improving access to tray
+    requirements and availability information.
+  </p>
+
+  <h3 id="guidance-v1">
+    6.2.1 Prototype 1: Retrieval Guidance
+  </h3>
+
+  <p>
+    We explored Camera-Based Arrows,
+    Direction and Proximity, and
+    Recorded Storage Location.
+  </p>
+
+  <!-- FIGURE 17 -->
+
+  <figure class="report-figure">
+    <img
+      src="assets/figure17-guidance-v1.png"
+      alt="Prototype 1 Retrieval Guidance">
+  
+    <figcaption>
+      <strong>Figure 14.</strong>
+      <i>Prototype 1: Initial Retrieval Guidance Interfaces</i>
+    </figcaption>
+  </figure>
+  
+  <p>
+    Nurse feedback suggested that visual
+    navigation may be useful for junior nurses,
+    while experienced nurses may prefer
+    direct location information.
+  </p>
+
+  <h3 id="guidance-v2">
+    6.2.2 Prototype 2: Retrieval Guidance
+  </h3>
+
+  <p>
+    The revised interfaces place greater
+    emphasis on showing the exact storage
+    zone, shelf and slot.
+  </p>
+
+  <!-- FIGURE 18 -->
+  <figure class="report-figure">
+    <img
+      src="assets/figure18-guidance-v2.png"
+      alt="Prototype 2 Retrieval Guidance">
+
+    <figcaption>
+      <strong>Figure 15.</strong>
+      <i>Prototype 2: Revised Retrieval Guidance Interfaces</i>
+    </figcaption>
+  </figure>
+
+  <p>
+    Visual highlighting was also explored
+    to help nurses identify the correct tray
+    among surrounding sets.
+  </p>
+
+</section>
+
+<sl-divider></sl-divider>
+
+
+<!-- SECTION 7: FUTURE DEVELOPMENT -->
+
+<section id="future" class="report-section">
+
+  <h2>7. Limitations and Future Development Plan</h2>
+
+  <h3>7.1 Current Limitations</h3>
+
+  <p>
+    We have not yet demonstrated reliable
+    identification of multiple metal trays
+    placed close together.
+  </p>
+
+  <p>
+    Exact-slot localisation also remains
+    unresolved, and our current tests
+    use simplified setups.
+  </p>
+
+  <h3>7.2 Planned Technical Development</h3>
+
+  <p>
+    We will investigate UHF RFID under
+    conditions that better represent
+    the hospital storage environment.
+  </p>
+
+  <p>
+    We plan to build a small-scale mock
+    shelf to test tray placement,
+    removal and relocation.
+  </p>
+
+  <h3>7.3 Planned User Testing</h3>
+
+  <p>
+    Future testing will compare
+    preparation-list entry,
+    retrieval guidance and
+    retrieval confirmation.
+  </p>
+
+  <h3>7.4 Integrated System Validation</h3>
+
+  <p>
+    We will compare the integrated prototype
+    against a representative manual
+    retrieval process.
+  </p>
+
+  <p>
+    Measurements will include retrieval time,
+    identification accuracy, location accuracy
+    and user effort.
+  </p>
+
+  <!-- FIGURE 19 -->
+
+  <div class="image-placeholder">
+    <strong>Figure 19.</strong>
+    <i>Proposed Development Timeline
+    and Gantt Chart</i>
+  </div>
+
+</section>
+
+<sl-divider></sl-divider>
+
+
+<!-- CONCLUSION -->
+
+<section id="conclusion" class="report-section">
+
+  <h2>8. Conclusion</h2>
+
+  <p>
+    Through clinical observations,
+    stakeholder interviews and nurse surveys,
+    we identified uncertainty about tray
+    location and availability as an
+    important challenge during
+    preoperative preparation.
+  </p>
+
+  <p>
+    We explored several possible solutions
+    and selected the Smart Shelf as a
+    promising concept for further development.
+  </p>
+
+  <p>
+    Our initial barcode and NFC experiments
+    revealed practical identification
+    limitations, while feedback from nurses
+    and a vendor helped refine the
+    proposed workflow.
+  </p>
+
+  <p>
+    Moving forward, we will focus on
+    reliable tray identification,
+    accurate location detection
+    and integrated system testing.
+  </p>
+
+</section>
+
+<sl-divider></sl-divider>
+
+
+<!-- REFERENCES -->
+
+<section id="references" class="report-section references">
+
+  <h2>References</h2>
+
+  <p>
+    Insert your complete academic
+    reference list here.
+  </p>
+
+</section>
+
+<sl-divider></sl-divider>
+
+
+<!-- ANNEXES -->
+
+<section id="annexes" class="report-section">
+
+  <h2>Annexes</h2>
+
+  <p>
+    The following annexes contain supporting
+    materials from our stakeholder interviews,
+    brainstorming activities and initial
+    technical testing.
+  </p>
+
+  <!-- ANNEX A -->
+
+  <div id="annex-a" class="appendix-section">
+
+    <h3>Annex A. Selected Stakeholder Interview Notes</h3>
+
+    <p>
+      The following tables present selected notes
+      from stakeholder interviews conducted during
+      the discovery phase.
+    </p>
+
+    <!--
+      PASTE YOUR EXISTING ANNEX A INTERVIEW TABLES HERE.
+      Keep the six interview tables you already created.
+    -->
+
+  </div>
+
+  <sl-divider></sl-divider>
+
+
+  <!-- ANNEX B -->
+
+  <div id="annex-b" class="appendix-section">
+
+    <h3>Annex B. Brainstorming and Concept Development</h3>
+
+    <p>
+      This annex presents our brainstorming activities,
+      including the ACE framework, BruteThink and
+      early concept sketches.
+    </p>
+
+    <figure class="report-figure">
+      <img src="assets/ace-framework.png"
+           alt="ACE Framework">
+      <figcaption>
+        <strong>Figure B1.</strong>
+        <i>ACE Framework for Organising Proposed Solutions</i>
+      </figcaption>
+    </figure>
+
+    <figure class="report-figure">
+      <img src="assets/brutethink.png"
+           alt="BruteThink brainstorming">
+      <figcaption>
+        <strong>Figure B2.</strong>
+        <i>BruteThink Brainstorming Activity</i>
+      </figcaption>
+    </figure>
+
+    <figure class="report-figure">
+      <img src="assets/concept-sketch-1.png"
+           alt="Initial concept sketches sheet 1">
+      <figcaption>
+        <strong>Figure B3.</strong>
+        <i>Initial Concept Sketches — Sheet 1</i>
+      </figcaption>
+    </figure>
+
+    <figure class="report-figure">
+      <img src="assets/concept-sketch-2.png"
+           alt="Initial concept sketches sheet 2">
+      <figcaption>
+        <strong>Figure B4.</strong>
+        <i>Initial Concept Sketches — Sheet 2</i>
+      </figcaption>
+    </figure>
+
+    <figure class="report-figure">
+      <img src="assets/concept-sketch-3.png"
+           alt="Initial concept sketches sheet 3">
+      <figcaption>
+        <strong>Figure B5.</strong>
+        <i>Initial Concept Sketches — Sheet 3</i>
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <sl-divider></sl-divider>
+
+
+  <!-- ANNEX C -->
+
+  <div id="annex-c" class="appendix-section">
+
+    <h3>Annex C. Initial Technical Prototyping</h3>
+
+    <p>
+      This annex contains photographs from our initial
+      barcode and NFC experiments.
+    </p>
+
+    <figure class="report-figure">
+      <img src="assets/barcode-testing.png"
+           alt="Barcode testing">
+      <figcaption>
+        <strong>Figure C1.</strong>
+        <i>Barcode Identification and Scanning Tests</i>
+      </figcaption>
+    </figure>
+
+    <figure class="report-figure">
+      <img src="assets/nfc-testing.png"
+           alt="NFC testing">
+      <figcaption>
+        <strong>Figure C2.</strong>
+        <i>NFC Identification During Tray Movement</i>
+      </figcaption>
+    </figure>
+
+  </div>
+
+</section>
+
+
+<!-- REPORT FOOTER -->
+
+<footer class="report-footer">
+  Orthomatic (EIM-435) |
+  CDE4301 Interim Report |
+  November 2026
+</footer>
+
+</div>
+
+<!-- SCROLL TO TOP -->
+
+<sl-button
+  class="scroll-to-top"
+  variant="primary"
+  size="medium"
+  circle
+  onclick="scrollToTop()">
+
+  <sl-icon name="arrow-up"></sl-icon>
+
+</sl-button>
+
 </body>
-
 </html>
