@@ -659,7 +659,7 @@ These findings suggest that the main difficulty is not always a missing tray, bu
 
   <div class="statement">
     <p>
-      OT nurses face uncertainty about the location and availability of orthopaedic instrument trays during preoperative preparation, leading to additional searching, repeated communication and time spent gathering the required instruments.
+      <strong>OT nurses face uncertainty about the location and availability of orthopaedic instrument trays during preoperative preparation, leading to additional searching, repeated communication and time spent gathering the required instruments.</strong>
     </p>
   </div>
 
@@ -677,7 +677,7 @@ These findings suggest that the main difficulty is not always a missing tray, bu
   </div>
 
    <p>
-      Before reaching this statement, we clarified the tray-preparation workflow, where the solution should fit, and what it can realistically improve. Our project focuses on improving tray identification and retrieval. Nurses often retrieve familiar trays quickly from memory, so the goal is to prevent corner cases where a routine 3-4 minute retrieval turns into a search lasting up to 30 minutes for a singular tray [Annex D].
+      Before reaching this statement, we clarified the tray-preparation workflow, where the solution should fit, and what it can realistically improve. Our project focuses on improving tray identification and retrieval. Nurses often retrieve familiar trays quickly from memory, so the goal is to prevent corner cases where a routine 3-4 minute retrieval turns into a search lasting up to 30 minutes for a singular tray [Annex C].
     </p>
 
 </section>
@@ -704,6 +704,19 @@ These findings suggest that the main difficulty is not always a missing tray, bu
 <!-- SECTION 3.2: EXISTING SOLUTIONS -->
 
 <h3>3.2 Existing Solutions</h3>
+
+<figure class="report-figure">
+  <img
+    src="assets/figure19-existingsolutions.png"
+    alt="c">
+
+  <figcaption>
+    <strong>Figure 8.</strong>
+    <i>Radar Chart of Existing Solutions</i>
+  </figcaption>
+</figure>
+
+
    <p>
     Current methods include handwritten preparation lists, calls and messages between stakeholders, and barcode tracking. However, existing barcode systems mainly support sterilisation tracking and billing rather than providing live tray locations.
    </p>
@@ -886,7 +899,7 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
       alt="Morphological Chart">
   
     <figcaption>
-      <strong>Figure 8.</strong>
+      <strong>Figure 9.</strong>
       <i>Morphological Chart of Proposed System Functions and Technologies</i>
     </figcaption>
   </figure>
@@ -913,8 +926,8 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
       alt="Smart Shelf Concept">
 
     <figcaption>
-      <strong>Figure 9.</strong>
-      <i>Concept A: Smart Shelf</i>
+      <strong>Figure 10.</strong>
+      <i>Concept A: AI-generated Impression of Smart Shelf</i>
     </figcaption>
   </figure>
 
@@ -940,8 +953,8 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
       alt="Handheld Finder Concept">
 
     <figcaption>
-      <strong>Figure 10.</strong>
-      <i>Concept B: Handheld Finder</i>
+      <strong>Figure 11.</strong>
+      <i>Concept B: AI-generated Impression of Handheld Finder</i>
     </figcaption>
   </figure>
 
@@ -973,7 +986,7 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
     alt="Retrofit Smart Shelf Locator">
 
   <figcaption>
-    <strong>Figure 11.</strong>
+    <strong>Figure 12.</strong>
     <i>Proposed Retrofit Smart Shelf Locator and System Architecture</i>
   </figcaption>
 </figure>
@@ -1159,7 +1172,7 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
       alt="Prototype 1 Entering Required Trays">
   
     <figcaption>
-      <strong>Figure 12.</strong>
+      <strong>Figure 13.</strong>
       <i>Prototype 1: Initial Interfaces for Entering Required Trays</i>
     </figcaption>
   </figure>
@@ -1189,7 +1202,7 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
       alt="Prototype 2 Entering Required Trays">
   
     <figcaption>
-      <strong>Figure 13.</strong>
+      <strong>Figure 14.</strong>
       <i>Prototype 2: Revised Interfaces for Entering Required Trays</i>
     </figcaption>
   </figure>
@@ -1218,7 +1231,7 @@ Nurses continued to prefer Shared Vendor Entry, but further discussions revealed
       alt="Prototype 1 Retrieval Guidance">
   
     <figcaption>
-      <strong>Figure 14.</strong>
+      <strong>Figure 15.</strong>
       <i>Prototype 1: Initial Retrieval Guidance Interfaces</i>
     </figcaption>
   </figure>
@@ -1250,7 +1263,7 @@ Nurses continued to prefer Shared Vendor Entry, but further discussions revealed
       alt="Prototype 2 Retrieval Guidance">
 
     <figcaption>
-      <strong>Figure 15.</strong>
+      <strong>Figure 16.</strong>
       <i>Prototype 2: Revised Retrieval Guidance Interfaces</i>
     </figcaption>
   </figure>
@@ -1263,42 +1276,53 @@ Nurses continued to prefer Shared Vendor Entry, but further discussions revealed
     Feedback favoured Options A and C for their clearer tray identification, while Option B's map could help when trays are stored in TSSU. These findings support the Retrofit Smart Shelf concept, where LED indicators highlight the required shelf position. Further testing will assess whether this guidance reduces retrieval time.
   </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Observation</th>
-      <th>Interpretation</th>
-      <th>Design implication</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Junior nurses preferred camera guidance</td>
-      <td>They are less familiar with the storage layout</td>
-      <td>Provide optional navigation support</td>
-    </tr>
-    <tr>
-      <td>Experienced nurses preferred direct location information</td>
-      <td>They already know the general storage areas</td>
-      <td>Display room, shelf and slot immediately</td>
-    </tr>
-    <tr>
-      <td>Nurses preferred vendor entry</td>
-      <td>It could reduce repeated entry of tray requirements</td>
-      <td>Explore shared vendor access</td>
-    </tr>
-    <tr>
-      <td>Nurses wanted availability updates</td>
-      <td>Location alone does not confirm readiness</td>
-      <td>Display tray status alongside location</td>
-    </tr>
-    <tr>
-      <td>Nurses valued illuminated shelves</td>
-      <td>They need to distinguish the exact tray from similar-looking sets</td>
-      <td>Validate slot-level LED indicators</td>
-    </tr>
-  </tbody>
-</table>
+
+<!-- STAKEHOLDER FEEDBACK TABLE -->
+
+<h4>Table of Stakeholder Feedback and Design Implications</h4>
+
+  <table class="feedback-table">
+    <thead>
+      <tr>
+        <th>Observation</th>
+        <th>Interpretation</th>
+        <th>Design Implication</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Junior nurses preferred camera guidance</td>
+        <td>They are less familiar with the storage layout</td>
+        <td>Provide optional navigation support</td>
+      </tr>
+
+      <tr>
+        <td>Experienced nurses preferred direct location information</td>
+        <td>They already know the general storage areas</td>
+        <td>Display room, shelf and slot immediately</td>
+      </tr>
+
+      <tr>
+        <td>Nurses preferred vendor entry</td>
+        <td>It could reduce repeated entry of tray requirements</td>
+        <td>Explore shared vendor access</td>
+      </tr>
+
+      <tr>
+        <td>Nurses wanted availability updates</td>
+        <td>Location alone does not confirm readiness</td>
+        <td>Display tray status alongside location</td>
+      </tr>
+
+      <tr>
+        <td>Nurses valued illuminated shelves</td>
+        <td>They need to distinguish the exact tray from similar-looking sets</td>
+        <td>Validate slot-level LED indicators</td>
+      </tr>
+    </tbody>
+  </table>
+
 
 <p>
   This table summarises the main observations, our interpretation of these findings and how they informed the proposed system design.
@@ -1355,17 +1379,18 @@ Nurses continued to prefer Shared Vendor Entry, but further discussions revealed
     Our target is to locate each required tray within three minutes. The development schedule runs from November 2026 to April 2027, covering feasibility testing, system integration, user evaluation and final refinement.
   </p>
 
-  <!-- FIGURE 19 -->
+ <!-- FIGURE 20 -->
 
-  <div class="image-placeholder">
-    <strong>Figure 19.</strong>
-    <i>Proposed Development Timeline
-    and Gantt Chart</i>
-  </div>
+ <figure class="report-figure">
+  <img
+    src="assets/figure20_ganttchart.png"
+    alt="Gantt Chart">
 
-</section>
-
-<sl-divider></sl-divider>
+  <figcaption>
+    <strong>Figure 17.</strong>
+    <i>Gantt Chart</i>
+  </figcaption>
+</figure>
 
 
 <!-- CONCLUSION -->
@@ -1396,13 +1421,20 @@ Nurses continued to prefer Shared Vendor Entry, but further discussions revealed
 <section id="references" class="report-section references">
 
   <h2>References</h2>
+  <p>
+    Alfred, M., Catchpole, K., Huffer, E., Fredendall, L., & Taaffe, K. M. (2021). Work systems analysis of sterile processing: Assembly. BMJ Quality & Safety, 30(4), 271–282. https://doi.org/10.1136/bmjqs-2019-010740 
+  </p>
 
   <p>
-    Thorlux Lighting. (n.d.). Operating theatres & clinical areas. Retrieved November 13, 2026, from https://www.thorlux.com/applications/healthcare/operating-theatres
+    Clari, M., Godono, A., Garzaro, G., Voglino, G., Gualano, M. R., Migliaretti, G., Gullino, A., Ciocan, C., & Dimonte, V. (2021). Prevalence of musculoskeletal disorders among perioperative nurses: A systematic review and meta-analysis. BMC Musculoskeletal Disorders, 22, Article 226. https://doi.org/10.1186/s12891-021-04057-3
   </p>
 
   <p>
     STMicroelectronics. (n.d.). NFC technology - Essentials & insights. Retrieved November 13, 2026, from https://www.st.com/content/st_com/en/support/learning/essentials-and-insights/connectivity/nfc.html
+  </p>
+
+  <p>
+    Thorlux Lighting. (n.d.). Operating theatres & clinical areas. Retrieved November 13, 2026, from https://www.thorlux.com/applications/healthcare/operating-theatres
   </p>
 
 </section>
@@ -1423,146 +1455,445 @@ Nurses continued to prefer Shared Vendor Entry, but further discussions revealed
     technical testing.
   </p>
 
-  <!-- ANNEX A -->
+  
+<!-- ============================= -->
+<!-- ANNEX A: STAKEHOLDER INTERVIEWS -->
+<!-- ============================= -->
 
-  <div id="annex-a" class="appendix-section">
+<section id="annex-a">
+  <h2>Annex A. Selected Stakeholder Interview Notes</h2>
 
-    <h3>Annex A. Selected Stakeholder Interview Notes</h3>
+  <p>
+    This annex contains selected stakeholder interview notes
+    collected during the Discovery phase.
+  </p>
 
-    <p>
-      The following tables present selected notes
-      from stakeholder interviews conducted during
-      the discovery phase.
-    </p>
+  <h3>A1. SKH Nurse in Orthopaedics and General Surgery</h3>
 
-    <!--
-      PASTE YOUR EXISTING ANNEX A INTERVIEW TABLES HERE.
-      Keep the six interview tables you already created.
-    -->
+  <table class="annex-table">
+    <tbody>
+      <tr>
+        <th>Interviewee (name / role)</th>
+        <td>J, SKH Nurse in Ortho &amp; GS</td>
+      </tr>
+      <tr>
+        <th>Date &amp; mode</th>
+        <td>1 Sept 2026, Teams</td>
+      </tr>
+      <tr>
+        <th>Notes and Key Quotes</th>
+        <td>
+          <p><strong>What her job scope is:</strong></p>
+          <ul>
+            <li>Have standby sets in orthopaedics, even though probability of using is low.</li>
+            <li>Day before surgery: nurses contact vendors to provide a list of sets needed.</li>
+            <li>If the set is in the hospital, nurses search for it. Otherwise, vendors send it in and CSSU receives and sterilises it.</li>
+            <li>Fill in a FormSG, tracked by CSSU and OT staff, with the entire list of consignment sets needed for each surgery.</li>
+            <li>Send a WhatsApp list to hand over to the next shift.</li>
+          </ul>
 
-  </div>
+          <p><strong>Trays organised in carts:</strong></p>
+          <ul>
+            <li>Nurses need to set aside time to sieve through sets.</li>
+            <li>CSSU pushes out each cart with mixed orders.</li>
+            <li>Sorting takes 30 minutes to 1 hour, depending on difficulty locating sets.</li>
+            <li>Not all sets are metal and some need delicate handling, including Instrutainers.</li>
+          </ul>
 
-  <sl-divider></sl-divider>
+          <p><strong>Back brace project:</strong></p>
+          <ul>
+            <li>Led by a physiotherapy group, with OT staff involved.</li>
+            <li>A back brace senses position and beeps if posture is incorrect.</li>
+            <li>Interviewee was unsure of the project details as she was only a supporter.</li>
+            <li>She viewed musculoskeletal injuries as an occupational hazard that could be reduced but not eliminated.</li>
+          </ul>
 
+          <p><strong>Compromised wrapping:</strong></p>
+          <ul>
+            <li>Frequency varies. Staff usually check wrappers the day before surgery.</li>
+            <li>Blunt trauma, such as dropping trays, may damage wrapping.</li>
+            <li>There was a period when sets with holes were found almost daily.</li>
+          </ul>
 
-  <!-- ANNEX B -->
+          <p><strong>Nurse injuries:</strong></p>
+          <ul>
+            <li>Back and wrist pain are very common.</li>
+            <li>Preventive measures include education.</li>
+            <li>The orthopaedic nurse-in-charge prepares theatres for the next day.</li>
+            <li>Sometimes one person handles 20 sets for four OTs.</li>
+          </ul>
 
-  <div id="annex-b" class="appendix-section">
+          <p><strong>Intra-operative workflow:</strong></p>
+          <ul>
+            <li>Circulating nurse: non-sterile team member who opens consumables and sets for the scrub nurse.</li>
+            <li>Scrub nurse: ensures sets are ready and organises the sterile field.</li>
+            <li>Elective cases are planned, while trauma cases are unpredictable.</li>
+            <li>When instruments are unavailable, retrieving sets from CSSU can take 5–10 minutes.</li>
+            <li>CSSU staff enter information into their system, and nurses may need to go down to retrieve sets.</li>
+            <li>T-doc contains surgeons' preference files. Some lists are automatically generated but cannot be overridden.</li>
+            <li>Additional sets may be prepared for unpredictable surgeons.</li>
+            <li>Unused sets still require reprocessing, creating extra work for CSSU.</li>
+          </ul>
 
-    <h3>Annex B. Brainstorming and Concept Development</h3>
+          <p><strong>Errors and preparation difficulties:</strong></p>
+          <ul>
+            <li>Wrong labelling is rare, approximately once in more than three months.</li>
+            <li>Experienced staff may identify sets through size, weight or shaking the trays.</li>
+            <li>Errors occur mainly with vendor sets, as nurses are more familiar with hospital instruments.</li>
+            <li>Missing vendor instruments require checking with vendors.</li>
+            <li>Consignment sorting and preparation can take 1–2 hours.</li>
+            <li>If sets cannot be found, the CSSD team leader may help, sometimes requiring face-to-face enquiries.</li>
+          </ul>
 
-    <p>
-      This annex presents our brainstorming activities,
-      including the ACE framework, BruteThink and
-      early concept sketches.
-    </p>
+          <p><strong>Bottom line:</strong> SKH has an automated CSSU system to sort and distribute instruments to the OT.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-    <figure class="report-figure">
-      <img src="assets/ace-framework.png"
-           alt="ACE Framework">
-      <figcaption>
-        <strong>Figure B1.</strong>
-        <i>ACE Framework for Organising Proposed Solutions</i>
-      </figcaption>
-    </figure>
+  <h3>A2. SKH Scrub and Circulating Nurse</h3>
 
-    <figure class="report-figure">
-      <img src="assets/brutethink.png"
-           alt="BruteThink brainstorming">
-      <figcaption>
-        <strong>Figure B2.</strong>
-        <i>BruteThink Brainstorming Activity</i>
-      </figcaption>
-    </figure>
+  <table class="annex-table">
+    <tbody>
+      <tr>
+        <th>Interviewee (name / role)</th>
+        <td>SKH Scrub and Circulating Nurse (11 years of experience)</td>
+      </tr>
+      <tr>
+        <th>Date &amp; mode</th>
+        <td>3 Sept 2026, Teams</td>
+      </tr>
+      <tr>
+        <th>Notes and Key Quotes</th>
+        <td>
+          <ul>
+            <li>11 years of experience, familiar with the workflow and in charge of the mini consignment store.</li>
+          </ul>
 
-    <figure class="report-figure">
-      <img src="assets/concept-sketch-1.png"
-           alt="Initial concept sketches sheet 1">
-      <figcaption>
-        <strong>Figure B3.</strong>
-        <i>Initial Concept Sketches — Sheet 1</i>
-      </figcaption>
-    </figure>
+          <p><strong>Scrub nurse workflow:</strong></p>
+          <ul>
+            <li>Prepare instruments the day before surgery based on surgeon requests.</li>
+            <li>Arrange with vendors for required sets.</li>
+            <li>Vendor delivers sets to CSSU for washing and sterilisation.</li>
+            <li>Staff check completeness of consignment sets and discrepancies.</li>
+            <li>Sets for the next day's surgery should be ready by 6 am.</li>
+            <li>Check sterilisation indicators before arranging instruments in the preparation room.</li>
+            <li>During surgery, provide correct instruments at the correct time and verify instrument integrity and size.</li>
+          </ul>
 
-    <figure class="report-figure">
-      <img src="assets/concept-sketch-2.png"
-           alt="Initial concept sketches sheet 2">
-      <figcaption>
-        <strong>Figure B4.</strong>
-        <i>Initial Concept Sketches — Sheet 2</i>
-      </figcaption>
-    </figure>
+          <p><strong>Circulating nurse workflow:</strong></p>
+          <ul>
+            <li>Initiates team timeout and assists the scrub nurse.</li>
+            <li>Opens sterile instruments and handles last-minute requests from CSSU.</li>
+            <li>Performs instrument, sponge, gauze and sharps counts.</li>
+            <li>Documents changes and helps transfer the patient out of theatre.</li>
+          </ul>
 
-    <figure class="report-figure">
-      <img src="assets/concept-sketch-3.png"
-           alt="Initial concept sketches sheet 3">
-      <figcaption>
-        <strong>Figure B5.</strong>
-        <i>Initial Concept Sketches — Sheet 3</i>
-      </figcaption>
-    </figure>
+          <p><strong>Missing instruments and retrieval:</strong></p>
+          <ul>
+            <li>If an instrument is missing or dropped, another consignment set containing the item is retrieved.</li>
+            <li>The Level 3 mini consignment store is on the same level as the OT.</li>
+            <li>Walking takes less than one minute, and finding the set about half a minute; total retrieval is approximately three minutes.</li>
+            <li>The store uses clear labels for orthopaedic sets and shelves.</li>
+            <li>If the item is not in the store, nurses place an order through the hospital system, taking 5–10 minutes.</li>
+            <li>CSSU brings up mobile carts, including AMR delivery during night shifts.</li>
+            <li>Nurses stock the store themselves and are familiar with its layout.</li>
+          </ul>
 
-  </div>
+          <p><strong>Preparation and checking:</strong></p>
+          <ul>
+            <li>All sets are prepared one day before surgery.</li>
+            <li>Five to six OTs may need preparation, with five to six cases per OT.</li>
+            <li>Approximately one hour is needed to prepare each OT.</li>
+            <li>Complex cases may require 15–20 minutes; simpler cases 5–10 minutes.</li>
+            <li>Double-checking the next day takes 20–30 minutes.</li>
+            <li>Every required set must be checked individually.</li>
+            <li>Other staff may take prepared sets without informing the original nurse.</li>
+            <li>Packing and sterilisation take approximately two hours, followed by cooling.</li>
+            <li>Missing sets may be in packing, CSSU or the Level 3 store.</li>
+          </ul>
 
-  <sl-divider></sl-divider>
+          <p><strong>Communication and coordination:</strong></p>
+          <ul>
+            <li>CSSU can access tray location information through TDocs, but other staff cannot.</li>
+            <li>Nurses may need to confirm requirements with surgeons or vendors.</li>
+            <li>Surgeons generally confirm implants, while nurses confirm instruments.</li>
+          </ul>
 
+          <p><strong>Potential benefits of reducing search time:</strong></p>
+          <ul>
+            <li>More time for patient care, preparing scrub nurses and supporting ongoing cases.</li>
+            <li>Currently, one staff member may prepare all sets for the next day's cases.</li>
+            <li>Junior nurses may be assigned to find consignment sets and seek help from senior nurses if unsuccessful.</li>
+            <li>Approximately one-third of the nursing team may spend half their day preparing instruments.</li>
+          </ul>
 
-  <!-- ANNEX C -->
+          <p><strong>Work-related injuries:</strong></p>
+          <ul>
+            <li>Hand and back injuries are commonly observed.</li>
+            <li>Nurses can ask others for assistance or use adjustable trolleys when handling trays.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-  <div id="annex-c" class="appendix-section">
+  <h3>A3. Orthopaedic Surgeons and Former Nurse</h3>
 
-    <h3>Annex C. Initial Technical Prototyping</h3>
+  <table class="annex-table">
+    <tbody>
+      <tr>
+        <th>Interviewee (name / role)</th>
+        <td>Dr And, Dr Zha and Ex-Nurse</td>
+      </tr>
+      <tr>
+        <th>Date &amp; mode</th>
+        <td>14 Aug 2026, In person during workshop</td>
+      </tr>
+      <tr>
+        <th>Notes and Key Quotes</th>
+        <td>
+          <p><strong>Dr Andrew:</strong></p>
+          <ul>
+            <li>Nurses' instrument identification timing is not a major issue.</li>
+            <li>The main problem is the lack of kits rather than retrieval delays.</li>
+            <li>Occasional human errors occur, such as selecting a left implant instead of a right implant.</li>
+            <li>Multiple screws may be required because the correct length is determined during surgery.</li>
+          </ul>
 
-    <p>
-      This annex contains photographs from our initial
-      barcode and NFC experiments.
-    </p>
+          <p><strong>Dr Zhang:</strong></p>
+          <ul>
+            <li>Nurses' identification timing is not a major issue.</li>
+            <li>Nurses may take approximately 1–2 minutes to search for instruments.</li>
+            <li>Waiting becomes problematic when instruments have not been sterilised or are unavailable.</li>
+          </ul>
 
-    <figure class="report-figure">
-      <img src="assets/barcode-testing.png"
-           alt="Barcode testing">
-      <figcaption>
-        <strong>Figure C1.</strong>
-        <i>Barcode Identification and Scanning Tests</i>
-      </figcaption>
-    </figure>
+          <p><strong>Former nurse working in DePuy Synthes:</strong></p>
+          <ul>
+            <li>Surgeon requests instruments through the nurse or vendor.</li>
+            <li>Nurses contact vendors for specific sets.</li>
+            <li>Vendors deliver trays to the hospital for sterilisation.</li>
+            <li>After surgery, the hospital washes and decontaminates trays.</li>
+            <li>Rarely used sets are returned to vendors for storage.</li>
+            <li>Trauma procedures use standard sets for each system, such as forearm, pelvic and humerus systems.</li>
+            <li>Each system typically has one or two trays.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-    <figure class="report-figure">
-      <img src="assets/nfc-testing.png"
-           alt="NFC testing">
-      <figcaption>
-        <strong>Figure C2.</strong>
-        <i>NFC Identification During Tray Movement</i>
-      </figcaption>
-    </figure>
+  <h3>A4. Industry Representative</h3>
 
-  </div>
+  <table class="annex-table">
+    <tbody>
+      <tr>
+        <th>Interviewee (name / role)</th>
+        <td>Clement, Industry, Private Sales Manager</td>
+      </tr>
+      <tr>
+        <th>Date &amp; mode</th>
+        <td>7 Sept 2026</td>
+      </tr>
+      <tr>
+        <th>Notes and Key Quotes</th>
+        <td>
+          <p><strong>External sterilisation and hospital facilities:</strong></p>
+          <ul>
+            <li>Private hospitals may use third-party sterilisation plants or in-house facilities.</li>
+            <li>IHH/Parkway hospitals may send instruments to third-party sterilisation facilities.</li>
+            <li>Mount Alvernia, Farrer Park and Raffles Hospital have in-house sterilisation facilities.</li>
+            <li>Specialised air-conditioned vehicles transport instruments.</li>
+            <li>Different hospital classes and payment arrangements affect patient charges.</li>
+          </ul>
 
+          <p><strong>Case booking and implants:</strong></p>
+          <ul>
+            <li>Surgeons may operate across different private hospitals.</li>
+            <li>Surgeons contact their preferred vendors for required implants and instruments.</li>
+            <li>Vendors manage their own instruments, while nurses manage hospital instruments.</li>
+            <li>Implant materials include ceramic, titanium, steel and cobalt alloys.</li>
+            <li>Surgeons may choose instruments from different companies, such as Stryker, Zimmer or J&amp;J.</li>
+          </ul>
+
+          <p><strong>Workflow:</strong></p>
+          <ul>
+            <li>Consignment trays may be stored in hospitals or delivered for specific cases.</li>
+            <li>Trays are delivered to the OT or sterilisation facility.</li>
+            <li>Third-party sterilisation may involve additional transportation costs.</li>
+            <li>Urgent cases can result in higher costs.</li>
+            <li>Private hospitals may have limited space for large sterilisation facilities.</li>
+            <li>Only basic instruments may be purchased, with other instruments supplied on consignment.</li>
+          </ul>
+
+          <p><strong>Transport and handover:</strong></p>
+          <ul>
+            <li>Warehouse → Sterilisation plant → Vehicle → Hospital → OT.</li>
+            <li>Drivers need to understand routes, collection procedures and segregation of sets.</li>
+            <li>Incorrect segregation can result in the wrong sets reaching hospitals.</li>
+            <li>Outsourced drivers may change frequently.</li>
+            <li>Rough handling can damage wrappers or displace instruments.</li>
+            <li>Damaged wrappers may require urgent reprocessing before surgery.</li>
+            <li>Trays should generally be delivered 24 hours before surgery.</li>
+            <li>Hospital staff must perform proper handover and record which sets belong to each case.</li>
+            <li>Sets may go missing because instruments move between multiple hospitals.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>A5. Orthopaedic Resident in Thailand</h3>
+
+  <table class="annex-table">
+    <tbody>
+      <tr>
+        <th>Interviewee (name / role)</th>
+        <td>Dr K, Orthopaedic Resident (Thailand)</td>
+      </tr>
+      <tr>
+        <th>Date &amp; mode</th>
+        <td>16 Aug 2026, Zoom</td>
+      </tr>
+      <tr>
+        <th>Notes and Key Quotes</th>
+        <td>
+          <ul>
+            <li>Dr K did not identify routine intra-operative instrument finding as a major issue. The team uses multiple tables and a tray is prepared for each table.</li>
+            <li>He stated, "we don't have that problem."</li>
+            <li>Vendor technicians can support cases involving their own systems.</li>
+            <li>Nurses and technicians jointly prepare equipment.</li>
+            <li>His main concern was instrument condition and correct use.</li>
+            <li>Incorrect use may cause instruments to break sooner.</li>
+            <li>Limited public-hospital budgets can make instrument replacement difficult.</li>
+            <li>Good preparation, sterilisation and checklist completion remain important.</li>
+            <li>Missing instruments can be managed by opening another tray, although this is not preferred.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>A6. Former SGH and Woodlands Health Nurse</h3>
+
+  <table class="annex-table">
+    <tbody>
+      <tr>
+        <th>Interviewee (name / role)</th>
+        <td>JY, Former SGH and Woodlands Health Orthopaedic Scrub Nurse; also performed OT-support booking and vendor liaison</td>
+      </tr>
+      <tr>
+        <th>Date &amp; mode</th>
+        <td>28 Aug 2026, Zoom</td>
+      </tr>
+      <tr>
+        <th>Notes and Key Quotes</th>
+        <td>
+          <ul>
+            <li>At SGH, a dedicated OT-support team booked and packed sets.</li>
+            <li>At Woodlands, different shifts could repeat vendor enquiries when handovers were unclear.</li>
+            <li>Nurses check elective lists at least five days in advance.</li>
+            <li>Nurses follow up with surgeons when implant companies or special instructions are missing.</li>
+            <li>Floating sets require vendor release, driver transfer, CSSD receipt, washing, packing, sterilisation, cooling and preparation.</li>
+            <li>Mislabelled trays, wet sets, residual blood or incorrectly retained disposable items may require replacements or urgent reprocessing.</li>
+            <li>Before scrubbing, nurses verify company sets, hospital instruments and consumables.</li>
+            <li>A prepared and familiar team helps the operation run smoothly.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </section>
 
 
-<!-- REPORT FOOTER -->
+<!-- ============================= -->
+<!-- ANNEX B: BRAINSTORMING -->
+<!-- ============================= -->
 
-<footer class="report-footer">
-  Orthomatic (EIM-435) |
-  CDE4301 Interim Report |
-  November 2026
-</footer>
+<section id="annex-b">
+  <h2>Annex B. Brainstorming and Concept Development</h2>
 
-</div>
+  <p>
+    This annex presents our brainstorming activities,
+    concept generation and early design sketches.
+  </p>
 
-<!-- SCROLL TO TOP -->
+  <figure class="report-figure">
+    <img src="assets/figureB1_conceptgeneration .png"
+         alt="Concept generation and ACE framework">
+    <figcaption>
+      <strong>Figure B1.</strong>
+      <em>Concept Generation and ACE Framework</em>
+    </figcaption>
+  </figure>
 
-<sl-button
-  class="scroll-to-top"
-  variant="primary"
-  size="medium"
-  circle
-  onclick="scrollToTop()">
+  <figure class="report-figure">
+    <img src="assets/figureB2_brainstorming.png"
+         alt="Brainstorming workshop">
+    <figcaption>
+      <strong>Figure B2.</strong>
+      <em>Brainstorming Workshop</em>
+    </figcaption>
+  </figure>
 
-  <sl-icon name="arrow-up"></sl-icon>
+  <figure class="report-figure">
+    <img src="assets/figureB3_conceptsketch.png"
+         alt="Initial concept sketches">
+    <figcaption>
+      <strong>Figure B3.</strong>
+      <em>Initial Concept Sketches</em>
+    </figcaption>
+  </figure>
 
-</sl-button>
 
-</body>
-</html>
+
+<!-- ============================= -->
+<!-- ANNEX C: NURSE SURVEY -->
+<!-- ============================= -->
+
+<section id="annex-c">
+  <h2>Annex C. Survey with Nurses</h2>
+
+  <p>
+    This annex presents the survey results collected
+    from 30 nurse respondents during the Discovery phase.
+  </p>
+
+  <figure class="report-figure">
+    <img src="assets/figureC1.png"
+         alt="Nurse survey overview">
+    <figcaption>
+      <strong>Figure C1.</strong>
+      <em>Survey Overview and Hospital Distribution</em>
+    </figcaption>
+  </figure>
+
+  <figure class="report-figure">
+    <img src="assets/figureC2_timedifficulttray.png"
+         alt="Time spent searching for trays">
+    <figcaption>
+      <strong>Figure C2.</strong>
+      <em>Time Required to Locate Difficult Trays</em>
+    </figcaption>
+  </figure>
+
+  <figure class="report-figure">
+    <img src="assets/figureC3_ frequencyodfifficulty.png"
+         alt="Time spent transporting counting and checking trays">
+    <figcaption>
+      <strong>Figure C3.</strong>
+      <em>Frequency of Difficulty Locating Trays</em>
+    </figcaption>
+  </figure>
+
+  <figure class="report-figure">
+    <img src="assets/figureC4_askothers.png"
+         alt="Frequency of difficulty locating trays">
+    <figcaption>
+      <strong>Figure C4.</strong>
+      <em>Frequency of Seeking Assistance to Locate Trays</em>
+    </figcaption>
+  </figure>
+
+
+</section>

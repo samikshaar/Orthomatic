@@ -16,3 +16,36 @@ p {
   text-align: justify;
   font-size: 1.1rem;
 }
+
+
+/* FIX: Stakeholder feedback table borders */
+
+table.feedback-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border: 2px solid #000000 !important;
+  margin: 20px 0 30px !important;
+}
+
+table.feedback-table th,
+table.feedback-table td {
+  border: 1px solid #000000 !important;
+  padding: 12px !important;
+  text-align: left !important;
+  vertical-align: top !important;
+  color: #000000 !important;
+}
+
+table.feedback-table thead th {
+  background-color: #0c073d !important;
+  color: #ffffff !important;
+  font-weight: bold !important;
+}
+
+table.feedback-table tbody tr:nth-child(even) td {
+  background-color: #f3f5f8 !important;
+}
+
+table.feedback-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff !important;
+}
