@@ -389,3 +389,20 @@ table.rfid-comparison-table td:first-child {
     padding: 7px !important;
   }
 }
+
+
+/* ANNEX A1-A6: BLACK TABLE BORDERS ONLY */
+
+#annex-a table.annex-table {
+  border: 1px solid #000000 !important;
+  border-collapse: collapse !important;
+}
+
+#annex-a table.annex-table th,
+#annex-a table.annex-table td {
+  border: 1px solid #000000 !important;
+}
+
+
+
+
