@@ -126,7 +126,20 @@ table.testing-table td:first-child {
   }
 }
 
+/* ANNEX A INTERVIEW TABLES: BORDERS*/
 
+table.annex-table {
+width: 100%;
+border-collapse: collapse;
+border: 1px solid #000000;
+}
+
+table.annex-table th,
+table.annex-table td {
+border: 1px solid #000000;
+vertical-align: top;
+text-align: left;
+}
 
 /* BLACK BORDERS FOR ALL TESTING TABLES */
 
