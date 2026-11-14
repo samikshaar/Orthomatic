@@ -51,39 +51,3 @@ table.feedback-table tbody tr:nth-child(odd) td {
 }
 
 
-
-
-/* ANNEX A - TABLE BORDERS */
-
-#annex-a table.annex-table {
-  width: 100% !important;
-  border: 2px solid black !important;
-  border-collapse: collapse !important;
-  margin: 20px 0 40px !important;
-  table-layout: fixed;
-}
-
-#annex-a table.annex-table th,
-#annex-a table.annex-table td {
-  border: 1px solid black !important;
-  padding: 14px !important;
-  text-align: left !important;
-  vertical-align: top !important;
-  background-color: white !important;
-  color: black !important;
-}
-
-#annex-a table.annex-table th {
-  width: 25%;
-  font-weight: bold;
-}
-
-#annex-a table.annex-table td {
-  width: 75%;
-}
-
-#annex-a table.annex-table ul {
-  margin: 8px 0 14px;
-  padding-left: 24px;
-}
-
