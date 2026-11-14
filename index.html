@@ -900,6 +900,82 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
   <p>
     This approach allowed us to explore different combinations before selecting a lead concept.
   </p>
+
+<!-- COMPARISON OF IDENTIFICATION TECHNOLOGIES -->
+<p>
+  To identify a suitable technology for automatic tray identification, we considered NFC, Bluetooth Low Energy (BLE) and UHF RFID. These technologies were compared based on cost, reading range, battery requirements and compatibility with sterilisation processes. 
+</p>
+
+<h4>Comparison of NFC, BLE and UHF RFID</h4>
+
+<table class="rfid-comparison-table">
+  <thead>
+    <tr>
+      <th>Criteria</th>
+      <th>NFC</th>
+      <th>Bluetooth Low Energy (BLE)</th>
+      <th>UHF RFID</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Cost</strong></td>
+      <td>Low</td>
+      <td>Moderate to high</td>
+      <td>Low tag cost but higher reader cost</td>
+    </tr>
+
+    <tr>
+      <td><strong>Typical Reading Range</strong></td>
+      <td>Less than 10 cm</td>
+      <td>1 to 30+ m</td>
+      <td>1 to 10+ m</td>
+    </tr>
+
+    <tr>
+      <td><strong>Passive (Battery-Free)</strong></td>
+      <td>Yes</td>
+      <td>Generally no</td>
+      <td>Yes</td>
+    </tr>
+
+    <tr>
+      <td><strong>Multiple Tag Detection</strong></td>
+      <td>Limited; usually one at a time</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+
+    <tr>
+      <td><strong>Metal Compatibility</strong></td>
+      <td>Requires suitable on-metal tags</td>
+      <td>Can be affected by metal</td>
+      <td>Requires suitable on-metal tags</td>
+    </tr>
+
+    <tr>
+      <td><strong>Sterilisation Compatibility</strong></td>
+      <td>Specialised tags required</td>
+      <td>Difficult for battery-powered tags</td>
+      <td>Specialised sterilisation-rated tags required</td>
+    </tr>
+
+    <tr>
+      <td><strong>Suitability for Orthomatic</strong></td>
+      <td>Limited by short reading range</td>
+      <td>Battery maintenance concerns</td>
+      <td>
+        Promising for simultaneous tray identification,
+        pending validation
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  While the general capabilities of these technologies are well documented, their performance in our intended storage environment remains uncertain. Further testing is needed to evaluate location accuracy, the ability to distinguish closely spaced trays and potential interference from surrounding metal surfaces.
+</p>
   
   <h3>4.2 Concept A: Smart Shelf</h3>
 
@@ -1063,7 +1139,7 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
   </p>
 
   <p>
-    Our next iteration will therefore use more representative materials and setting, while measuring scanning success and time across repeated trials.
+    Our next iteration will therefore use more representative materials and setting, while measuring scanning success.
   </p>
 
   <h3>5.2 Barcode Testing: Scanning Coverage</h3>

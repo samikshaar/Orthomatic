@@ -330,3 +330,62 @@ table.testing-table thead th {
   }
   
 
+
+/* RFID TECHNOLOGY COMPARISON TABLE */
+
+table.rfid-comparison-table {
+  display: table !important;
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border: 1px solid black !important;
+  margin: 20px 0 30px !important;
+  table-layout: fixed !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+table.rfid-comparison-table th,
+table.rfid-comparison-table td {
+  display: table-cell !important;
+  border: 1px solid black !important;
+  padding: 10px 12px !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+  overflow-wrap: break-word !important;
+}
+
+table.rfid-comparison-table thead th {
+  background-color: #0c073d !important;
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+table.rfid-comparison-table tbody td {
+  color: black !important;
+}
+
+table.rfid-comparison-table tbody tr:nth-child(odd) td {
+  background-color: white !important;
+}
+
+table.rfid-comparison-table tbody tr:nth-child(even) td {
+  background-color: #f3f5f8 !important;
+}
+
+/* Column widths */
+
+table.rfid-comparison-table th:first-child,
+table.rfid-comparison-table td:first-child {
+  width: 24% !important;
+}
+
+@media (max-width: 700px) {
+  table.rfid-comparison-table {
+    font-size: 12px !important;
+  }
+
+  table.rfid-comparison-table th,
+  table.rfid-comparison-table td {
+    padding: 7px !important;
+  }
+}
