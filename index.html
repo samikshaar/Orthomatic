@@ -580,8 +580,8 @@ These findings suggest that the main difficulty is not always a missing tray, bu
   <p>
     Our matrix considered time impact, technical feasibility and ease of implementation, weighted at 40%, 35% and 25%, respectively. Time impact refers to the amount of time that could be cut by solving the issue, technical feasibility is how easily the problem could be tackled through technology and ease of implementation refers to how easily the stakeholders involved could be convinced to adopt a solution into their workflow.
   </p>
-  
-<table class="report-table">
+
+<table class="prioritisation-table"> 
   <thead>
     <tr>
       <th>Problem area</th>
@@ -604,14 +604,14 @@ These findings suggest that the main difficulty is not always a missing tray, bu
       <td>5</td>
       <td>4</td>
       <td>3</td>
-      <td><strong>4.25</strong></td>
+      <td><strong>4.15</strong></td>
     </tr>
     <tr>
       <td>Limited storage (infrastructure)</td>
       <td>3</td>
       <td>3</td>
       <td>2</td>
-      <td>2.85</td>
+      <td>2.75</td>
     </tr>
     <tr>
       <td>Too many tray varieties</td>
@@ -625,7 +625,7 @@ These findings suggest that the main difficulty is not always a missing tray, bu
       <td>3</td>
       <td>2</td>
       <td>1</td>
-      <td>2.25</td>
+      <td>2.15</td>
     </tr>
   </tbody>
 </table>
@@ -731,7 +731,7 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
 
 <h4>Must Have</h4>
 
-<table class="report-table">
+ <table class="requirements-table">
   <thead>
     <tr>
       <th>S/N</th>
@@ -795,7 +795,7 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
 
 <h4>Good-to-Have</h4>
 
-<table class="report-table">
+<table class="requirements-table">
   <thead>
     <tr>
       <th>S/N</th>
@@ -1008,22 +1008,51 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
     We placed a barcode at a fixed scanning distance of 30 cm and tested four measured illuminance levels: 53, 150, 430 and 3,000 lux.  
     </p>
 
-  <table class="report-table">
-    <thead>
-      <tr>
-        <th>Illuminance</th>
-        <th>Distance</th>
-        <th>Detected</th>
-      </tr>
-    </thead>
 
-    <tbody>
-      <tr><td>53 lux</td><td>30 cm</td><td>Yes</td></tr>
-      <tr><td>150 lux</td><td>30 cm</td><td>Yes</td></tr>
-      <tr><td>430 lux</td><td>30 cm</td><td>Yes</td></tr>
-      <tr><td>3000 lux</td><td>30 cm</td><td>Yes</td></tr>
-    </tbody>
-  </table>
+    <h4>Barcode Identification Under Different Lighting Conditions</h4>
+
+    <table class="testing-table">
+      <thead>
+        <tr>
+          <th>Lighting(lux)</th>
+          <th>Trial 1</th>
+          <th>Trial 2</th>
+          <th>Trial 3</th>
+          <th>Detected?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>53</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>150</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>430</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>3000</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+    
 
   <p>
     Barcode detection was successful under all four conditions. As OT brightness is around 1000 lux (Thorlux Lighting, n.d), this suggests that lighting will not prevent identification within the tested range.
@@ -1047,7 +1076,7 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
     We used a 30 cm reference distance and tested barcode orientations of 90°, 60° and 45° at lateral offsets of 15, 45 and 60 cm.
   </p>
 
-  <table class="report-table">
+   <table class="testing-table">
     <thead>
       <tr>
         <th>Angle</th>
@@ -1062,7 +1091,7 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
       <tr><td>60°</td><td>Yes</td><td>No</td><td>No</td></tr>
       <tr><td>45°</td><td>Yes</td><td>No</td><td>No</td></tr>
     </tbody>
-  </table>
+    </table>
 
   <p>
     Scanning was successful at a 15 cm lateral offset but unsuccessful at 45 cm and 60 cm across all three tested barcode orientations.
@@ -1088,22 +1117,46 @@ SGH has also introduced a dedicated consignment team to retrieve trays, although
 
   <!-- FIGURE 14 -->
 
-  <table class="report-table">
+  
+<!-- SECTION 5.3: NFC TESTING -->
+
+  <table class="testing-table">
     <thead>
       <tr>
         <th>Trial</th>
-        <th>Speed</th>
+        <th>Speed (cm/s)</th>
         <th>Detected</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr><td>1</td><td>2.73 cm/s</td><td>Yes</td></tr>
-      <tr><td>2</td><td>3.61 cm/s</td><td>Yes</td></tr>
-      <tr><td>3</td><td>6.21 cm/s</td><td>No</td></tr>
-      <tr><td>Nurse handling estimate</td><td>23.25 cm/s</td><td>No</td></tr>
+      <tr>
+        <td>1</td>
+        <td>2.73 </td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>3.61 </td>
+        <td>Yes</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>6.21 </td>
+        <td>No</td>
+      </tr>
+
+      <tr>
+        <td>Nurse handling estimate</td>
+        <td>23.25 </td>
+        <td>No</td>
+      </tr>
     </tbody>
   </table>
+
+    
 
   <p>
     Successful detection was observed at calculated speeds of 2.73 cm/s and 3.61 cm/s, while detection was unsuccessful at 6.21 cm/s. We also recorded an estimated nursing tray-sliding speed of 23.25 cm/s. 
